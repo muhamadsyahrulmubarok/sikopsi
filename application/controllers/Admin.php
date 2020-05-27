@@ -54,26 +54,43 @@ class Admin extends CI_Controller
             $config['new_image'] = './assets/img_admin/' . $gbr['file_name'];
             $this->load->library('image_lib', $config);
             $this->image_lib->resize();
-            $gambar = $gbr['file_name'];
-            $data = array(
-                'nama_admin' => $this->input->post('nama_admin'),
-                'username_admin' => $this->input->post('username_admin'),
-                'pswd_admin' => password_hash($this->input->post('pswd_admin'), PASSWORD_DEFAULT),
-                'lvl_admin' => '2',
-                'img_admin' => $gambar
-            );
-
+			$gambar = $gbr['file_name'];
+			if (!$this->input->post('pswd_admin')) {
+				$data = array(
+					'nama_admin' => $this->input->post('nama_admin'),
+					'username_admin' => $this->input->post('username_admin'),
+					'pswd_admin' => password_hash($this->input->post('pswd_admin'), PASSWORD_DEFAULT),
+					'lvl_admin' => '2',
+					'img_admin' => $gambar
+            	);
+			} else {
+				$data = array(
+					'nama_admin' => $this->input->post('nama_admin'),
+					'username_admin' => $this->input->post('username_admin'),
+					'lvl_admin' => '2',
+					'img_admin' => $gambar
+				);
+			}
             $this->M_admin->Insert($data);
             $this->session->set_flashdata('message', '<div class="alert alert-success alert-dismissible" role="alert"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>Data berhasil di simpan</div>');
             redirect('admin', 'refresh');
         } else {
+			if (!$this->input->post('pswd_admin')) {
             $data = array(
+                'nama_admin' => $this->input->post('nama_admin'),
+                'username_admin' => $this->input->post('username_admin'),
+                'lvl_admin' => '2',
+                'img_admin' => 'default.png'
+			);
+			} else {
+			$data = array(
                 'nama_admin' => $this->input->post('nama_admin'),
                 'username_admin' => $this->input->post('username_admin'),
                 'pswd_admin' => password_hash($this->input->post('pswd_admin'), PASSWORD_DEFAULT),
                 'lvl_admin' => '2',
                 'img_admin' => 'default.png'
-            );
+			);	
+			}
             $this->M_admin->Insert($data);
             $this->session->set_flashdata('message', '<div class="alert alert-success alert-dismissible" role="alert"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>Data berhasil di simpan</div>');
             redirect('admin', 'refresh');
