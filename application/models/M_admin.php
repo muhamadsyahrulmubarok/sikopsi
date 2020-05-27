@@ -35,7 +35,7 @@ class M_admin extends CI_Model
     public function delete($id)
     {
         $this->db->where('id_admin', $id);
-        $this->db->delete('admin',);
+        $this->db->delete('admin');
         return $this->db->affected_rows();
     }
 }
