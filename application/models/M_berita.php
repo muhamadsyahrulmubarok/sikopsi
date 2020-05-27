@@ -28,7 +28,7 @@ class M_berita extends CI_Model
     public function delete($id)
     {
         $this->db->where('id_berita', $id);
-        $this->db->delete('berita',);
+        $this->db->delete('berita');
         return $this->db->affected_rows();
     }
 }
