@@ -36,7 +36,7 @@ class M_karyawan extends CI_Model
     public function delete($id)
     {
         $this->db->where('id_karyawan', $id);
-        $this->db->delete('karyawan',);
+        $this->db->delete('karyawan');
         return $this->db->affected_rows();
     }
 
