@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>Peminjaman - SIKOPSI</title>
+    <title>Laporan - SIKOPSI</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
     <meta content="Coderthemes" name="author" />
@@ -15,13 +15,11 @@
     <link href="<?php echo base_url(); ?>assets/backend/libs/datatables/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css" />
     <link href="<?php echo base_url(); ?>assets/backend/libs/datatables/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css" />
 
-    <!-- Sweet Alert-->
-    <link href="<?php echo base_url(); ?>assets/backend/libs/sweetalert2/sweetalert2.min.css" rel="stylesheet" type="text/css" />
-
     <!-- App css -->
     <link href="<?php echo base_url(); ?>assets/backend/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <link href="<?php echo base_url(); ?>assets/backend/css/icons.min.css" rel="stylesheet" type="text/css" />
     <link href="<?php echo base_url(); ?>assets/backend/css/app.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.6.2/css/buttons.dataTables.min.css">
 
 </head>
 
@@ -42,26 +40,27 @@
                     <form method="GET">
                         <div class="row">
                             <div class="col-md-3">
-                                <select class="custom-select" name="hari" id="hari">
-                                    <option value="0">Semua Hari</option>
-                                    <option value="1">Senin</option>
-                                    <option value="2">Selasa</option>
-                                    <option value="3">Rabu</option>
-                                    <option value="4">Kamis</option>
-                                    <option value="5">Jum'at</option>
-                                    <option value="6">Sabtu</option>
+                                <select class="custom-select" name="bulan" id="bulan">
+                                    <option value="0">Semua Bulan</option>
+                                    <option value="1">Januari</option>
+                                    <option value="2">Februari</option>
+                                    <option value="3">Maret</option>
+                                    <option value="4">April</option>
+                                    <option value="5">Mei</option>
+                                    <option value="6">Juni</option>
+                                    <option value="7">Juli</option>
+                                    <option value="8">Agustus</option>
+                                    <option value="9">September</option>
+                                    <option value="10">Oktober</option>
+                                    <option value="11">November</option>
+                                    <option value="12">Desember</option>
                                 </select>
                             </div>
                             <div class="col-md-3">
-                                <select class="custom-select" name="resort" id="resort">
-                                    <option value="0">Semua Resort</option>
-                                    <option value="B">BUGENVIL</option>
-                                    <option value="C">CEMPAKA</option>
-                                    <option value="D">DAHLIA</option>
-                                    <option value="E">ESTER</option>
-                                    <option value="F">FLAMBOYAN</option>
-                                    <option value="G">GADING</option>
-                                    <option value="H">HARUM</option>
+                                <select class="custom-select" name="tahun" id="tahun">
+                                    <option value="2020">2020</option>
+                                    <option value="2021">2021</option>
+                                    <option value="2022">2022</option>
                                 </select>
                             </div>
                             <div class="col-md-1">
@@ -72,12 +71,6 @@
 
                     <br>
                     <div class="dropdown-divider"></div>
-                    <a href="<?php echo site_url('peminjaman/tambah'); ?>"><button class="btn btn-primary">Tambah</button></a>
-                    <div class="float-right">
-                        <a href="<?php echo site_url('laporan'); ?>"><button class="btn btn-success">Laporan</button></a>
-                    </div>
-
-                    <p></p>
                     <h4 class="header-title">Data Peminjaman</h4>
 
                     <div class="dropdown-divider"></div>
@@ -85,10 +78,11 @@
                         <thead>
                             <tr>
                                 <th>No</th>
+                                <th>Nama Resort</th>
+                                <th>ID Anggota</th>
                                 <th>No Peminjaman</th>
                                 <th>Nama Anggota</th>
                                 <th>Total Pinjam</th>
-                                <th>Action</th>
                             </tr>
                         </thead>
 
@@ -100,11 +94,11 @@
                             ?>
                                 <tr>
                                     <td><?= $no; ?></td>
+                                    <td><?= $row['nama_resort']; ?></td>
+                                    <td><?= $row['id_anggota']; ?></td>
                                     <td><?= $row['no_peminjaman']; ?></td>
                                     <td><?= $row['nama_anggota']; ?></td>
-                                    <td><?= 'Rp. ' . number_format($row['total_pinjaman'], 0, '.', '.'); ?></td>
-                                    <td><a href="<?php echo site_url('peminjaman/lihat?id=') . $row['no_peminjaman']; ?>"><i class=" mdi mdi-information-variant"></i></a> | <a href="javascript:void(0);" onclick="alert('<?= $row['no_peminjaman'] ?>')"><i class="mdi mdi mdi-delete"></i></a>
-                                    </td>
+                                    <td><?= $row['total_pinjaman']; ?></td>
                                 </tr>
                             <?php
                                 $no++;
@@ -152,43 +146,20 @@
     <script src="<?php echo base_url(); ?>assets/backend/libs/datatables/dataTables.bootstrap4.min.js"></script>
     <script src="<?php echo base_url(); ?>assets/backend/libs/datatables/dataTables.responsive.min.js"></script>
     <script src="<?php echo base_url(); ?>assets/backend/libs/datatables/responsive.bootstrap4.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.6.2/js/dataTables.buttons.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.6.2/js/buttons.html5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
     <!-- Datatables init -->
     <script>
         $(document).ready(function() {
             $("#datatable").DataTable({
-                keys: !0
+                keys: !0,
+                dom: 'Bfrtip',
+                buttons: [
+                    'excelHtml5',
+                ]
             });
         });
-    </script>
-
-    <!-- Sweet Alerts js -->
-    <script src="<?php echo base_url(); ?>assets/backend/libs/sweetalert2/sweetalert2.min.js"></script>
-
-    <script>
-        function alert(id) {
-            var base_url = window.location.href;
-            Swal.fire({
-                title: "Apakah anda yakin?",
-                text: "Anda akan menghapus data peminjaman nomor " + id,
-                type: "warning",
-                showCancelButton: !0,
-                confirmButtonColor: "#31ce77",
-                cancelButtonColor: "#f34943",
-                confirmButtonText: "Ya, hapus ini!"
-            }).then(function(t) {
-                if (t.value) {
-                    Swal.fire({
-                        title: "Terhapus!",
-                        text: "Data peminjaman nomor " + id + " telah terhapus",
-                        type: "success"
-                    }).then(function() {
-                        window.location.replace(base_url + '/hapus?id=' + id)
-                    });
-                } else {
-                    t.dismiss === Swal.DismissReason.cancel
-                }
-            })
-        }
     </script>
 
     <!-- App js -->
@@ -199,11 +170,11 @@
         $(function() {
             var url_string = window.location;
             var url = new URL(url_string);
-            hari = url.searchParams.get("hari");
-            resort = url.searchParams.get("resort");
+            bulan = url.searchParams.get("bulan");
+            tahun = url.searchParams.get("tahun");
 
-            $('#hari option[value=' + hari + ']').attr('selected', true);
-            $('#resort option[value=' + resort + ']').attr('selected', true);
+            $('#bulan option[value=' + bulan + ']').attr('selected', true);
+            $('#tahun option[value=' + tahun + ']').attr('selected', true);
         });
     </script>
 </body>

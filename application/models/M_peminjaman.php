@@ -28,6 +28,18 @@ class M_peminjaman extends CI_Model
 
         return $this->db->get('peminjaman');
     }
+    public function GetLaporan($bulan = null, $tahun = null)
+    {
+        if ($bulan && $tahun) {
+            $query = $this->db->query('SELECT * FROM peminjaman JOIN anggota ON anggota.id_anggota = peminjaman.id_anggota JOIN resort ON resort.kd_resort = anggota.kd_resort WHERE YEAR(peminjaman.tgl_drop) = ' . $tahun . ' AND MONTH(peminjaman.tgl_drop) = ' . $bulan);
+        } elseif ($tahun) {
+            $query = $this->db->query('SELECT * FROM peminjaman JOIN anggota ON anggota.id_anggota = peminjaman.id_anggota WHERE YEAR(peminjaman.tgl_drop) = ' . $tahun);
+        } else {
+            $query = $this->db->query('SELECT * FROM peminjaman JOIN anggota ON anggota.id_anggota = peminjaman.id_anggota');
+        }
+
+        return $query;
+    }
 
     public function GetLastPeminjaman()
     {

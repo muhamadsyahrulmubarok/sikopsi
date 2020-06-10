@@ -12,6 +12,7 @@
     <style>
         hr {
             border: 1px solid #000;
+            margin-bottom: -14px !important;
         }
     </style>
 </head>
@@ -30,6 +31,7 @@
             </div>
             <hr>
             <hr>
+            <p></p>
             <div class="text-center">
                 Kartu Angsuran & Simpanan Anggota
             </div>
@@ -40,6 +42,68 @@
                 <div class="col-md-7">
                     : __________ Pinj: Ke ____ Hari ____
                 </div>
+            </div>
+            <div class="row">
+                <div class="col-md-5">
+                    No. Anggota
+                </div>
+                <div class="col-md-7">
+                    : __________ No. Pinj. _____________
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-5">
+                    Nama
+                </div>
+                <div class="col-md-7">
+                    :
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-5">
+                    Alamat
+                </div>
+                <div class="col-md-7">
+                    :
+                </div>
+                <div class="col-md-5"></div>
+                <div class="col-md-7">: RT ___ RW ___</div>
+                <div class="col-md-5"></div>
+                <div class="col-md-7">: Desa / Kel ___</div>
+                <div class="col-md-5"></div>
+                <div class="col-md-7">&nbsp;&nbsp;Kec. ____</div>
+                <div class="col-md-5"></div>
+                <div class="col-md-7">&nbsp;&nbsp;Kab. ____</div>
+            </div>
+            <div class="row">
+                <div class="col-md-5">
+                    No. HP
+                </div>
+                <div class="col-md-7">:</div>
+            </div>
+            <div class="row">
+                <div class="col-md-5">
+                    Macam Usaha
+                </div>
+                <div class="col-md-7">:</div>
+            </div>
+            <div class="row">
+                <div class="col-md-5">
+                    Pinjaman
+                </div>
+                <div class="col-md-7">:</div>
+            </div>
+            <div class="row">
+                <div class="col-md-5">
+                    Tiap Angsuran
+                </div>
+                <div class="col-md-7">:</div>
+            </div>
+            <div class="row">
+                <div class="col-md-5">
+                    Dengan Jaminan
+                </div>
+                <div class="col-md-7">:</div>
             </div>
         </div>
     </div>

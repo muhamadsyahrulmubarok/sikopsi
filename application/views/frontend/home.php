@@ -79,37 +79,7 @@
                                 <div class="col-sm-10">
                                     <div class="main-nav">
                                         <ul class="nav navbar-nav top-nav">
-                                            <li class="search-parent"> <a href="javascript:void(0)" title=""><i aria-hidden="true" class="fa fa-search"></i></a>
-                                                <div class="search-box ">
-                                                    <div class="content">
-                                                        <div class="form-control">
-                                                            <input type="text" placeholder="Type to search" />
-                                                            <a href="#" class="search-btn mar-1"><i aria-hidden="true" class="fa fa-search"></i></a>
-                                                        </div>
-                                                        <a href="#" class="close-btn mar-1">x</a>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li class="cart-parent"> <a href="javascript:void(0)" title=""> <i aria-hidden="true" class="fa fa-shopping-cart"></i> <span class="number mar2"> 4 </span> </a>
-                                                <div class="cart-box">
-                                                    <div class="content">
-                                                        <div class="row">
-                                                            <div class="col-xs-8"> 2 item(s) </div>
-                                                            <div class="col-xs-4 text-right"> <span>$99</span> </div>
-                                                        </div>
-                                                        <ul>
-                                                            <li> <img src="http://via.placeholder.com/80x80" alt=""> Jean & Teashirt <span>$30</span>
-                                                                <a href="#" title="" class="close-btn">x</a> </li>
-                                                            <li> <img src="http://via.placeholder.com/80x80" alt=""> Jean & Teashirt <span>$30</span>
-                                                                <a href="#" title="" class="close-btn">x</a> </li>
-                                                        </ul>
-                                                        <div class="row">
-                                                            <div class="col-xs-6"> <a href="#" title="View Cart" class="btn btn-block btn-warning">View Cart</a> </div>
-                                                            <div class="col-xs-6"> <a href="#" title="Check out" class="btn btn-block btn-primary">Check out</a> </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </li>
+
                                             <li class="visible-xs menu-icon"> <a href="javascript:void(0)" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu" aria-expanded="false"> <i aria-hidden="true" class="fa fa-bars"></i> </a> </li>
                                         </ul>
                                         <div id="menu" class="collapse">
@@ -240,21 +210,19 @@
                                         <div class="text-box">
                                             <div class="col-sm-12 nopadding">
                                                 <div class="sec-title-container less-padding-4 text-left">
-                                                    <h5 class="font-weight-4 less-mar-1 line-height-4 text-primary opacity-9">Who We are</h5>
-                                                    <h2 class="font-weight-6 less-mar-1 line-height-5">About Our Company</h2>
+                                                    <h5 class="font-weight-4 less-mar-1 line-height-4 text-primary opacity-9">Siapa Kami?</h5>
+                                                    <h2 class="font-weight-6 less-mar-1 line-height-5">Tentang Perusahaan Kami</h2>
                                                     <div class="ce-title-line align-left"></div>
                                                 </div>
                                             </div>
                                             <div class="clearfix"></div>
                                             <!--end title-->
 
-                                            <p>Praesent mattis commodo augue Aliquam ornare hendrerit augue Cras tellus In pulvinar lectus a
-                                                est Curabitur eget orci Cras laoreet ligula. Etiam sit amet dolor. Vestibulum ante ipsum primis
-                                                in faucibus orci luctus et ultrices posuere cubilia Curae Nullam tellus diam volutpat laoreet
-                                                vel. </p>
+                                            <p>
+                                                KSP Primkoppabri USP. 20 Slawi adalah sebuah lembaga keuangan mikro yang kegiatan utamanya adalah simpan pinjam. Salah satu tujuan didirikannya lembaga ini adalah membantu warga masyarakat di derah Tegal, Pemalang, serta Brebes dalam bidang pembiayaan keuangan.
+                                            </p>
                                             <br />
                                             <br />
-                                            <a class="btn btn-prim btn-medium btn-round uppercase" href="#"><i class="fa fa-play-circle" aria-hidden="true"></i> Read more</a>
                                         </div>
                                     </div>
                                 </div>
@@ -262,39 +230,6 @@
                             </div>
                             <!--end carousel item-->
 
-                            <div class="item">
-                                <div class="col-md-6 nopadding">
-                                    <div class="img-box">
-                                        <div class="overlay"></div>
-                                        <img src="http://via.placeholder.com/500x600" alt="" class="img-responsive" />
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-sm-12 col-xs-12 nopadding">
-                                    <div class="ce-feature-box-4 margin-bottom">
-                                        <div class="text-box">
-                                            <div class="col-sm-12 nopadding">
-                                                <div class="sec-title-container less-padding-4 text-left">
-                                                    <h5 class="font-weight-4 less-mar-1 line-height-4 text-primary opacity-9">What We Do</h5>
-                                                    <h2 class="font-weight-6 less-mar-1 line-height-5">We Design Quality</h2>
-                                                    <div class="ce-title-line align-left"></div>
-                                                </div>
-                                            </div>
-                                            <div class="clearfix"></div>
-                                            <!--end title-->
-
-                                            <p>Praesent mattis commodo augue Aliquam ornare hendrerit augue Cras tellus In pulvinar lectus a
-                                                est Curabitur eget orci Cras laoreet ligula. Etiam sit amet dolor. Vestibulum ante ipsum primis
-                                                in faucibus orci luctus et ultrices posuere cubilia Curae Nullam tellus diam volutpat laoreet
-                                                vel. </p>
-                                            <br />
-                                            <br />
-                                            <a class="btn btn-prim btn-medium btn-round uppercase" href="#"><i class="fa fa-play-circle" aria-hidden="true"></i> Read more</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!--end item-->
-                            </div>
-                            <!--end carousel item-->
 
                         </div>
                         <!--end carousel-->
@@ -305,72 +240,6 @@
             <div class="clearfix"></div>
             <!-- end section -->
 
-            <div class="parallax vertical-align" data-parallax-bg-image="<?php echo site_url('assets/frontend/'); ?>images/parallax/3.jpg" data-parallax-speed="0.9" data-parallax-direction="down">
-                <div class="parallax-overlay bg-opacity-7">
-                    <div class="container sec-tpadding-2 sec-bpadding-2">
-                        <div class="row">
-                            <div class="col-sm-12">
-                                <div class="sec-title-container text-left">
-                                    <h2 class="font-weight-6 less-mar-1 line-height-5 text-white">Know more about our company<br />
-                                        <span class="font-weight-3 text-white">and get unlimited features</span></h2>
-                                    <h6 class="ce-sub-text raleway align-left text-light">Praesent mattis commodo augue Aliquam ornare
-                                        hendrerit augue Cras tellus In pulvinar lectus a est Curabitur eget orci Cras laoreet ligula etiam
-                                        sit amet dolor Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia
-                                        Curae.</h6>
-                                </div>
-                            </div>
-                            <div class="clearfix"></div>
-                            <!--end title-->
-
-                            <div class="col-md-3 col-sm-6 col-xs-12 text-center margin-bottom">
-                                <div class="ce-feature-box-2 no-margin">
-                                    <div class=" iconbox-medium icon round"><span class="pe-7s-look"></span></div>
-                                    <div class="text-box">
-                                        <h1 class="text-white font-weight-4 less-mar-1 padding-top-1 title">3924</h1>
-                                        <h5 class="text-white">Projects</h5>
-                                    </div>
-                                </div>
-                            </div>
-                            <!--end item-->
-
-                            <div class="col-md-3 col-sm-6 col-xs-12 text-center margin-bottom">
-                                <div class="ce-feature-box-2 no-margin">
-                                    <div class=" iconbox-medium icon round"><span class="pe-7s-server"></span></div>
-                                    <div class="text-box">
-                                        <h1 class="text-white font-weight-4 less-mar-1 padding-top-1 title">1462</h1>
-                                        <h5 class="text-white">Compleated</h5>
-                                    </div>
-                                </div>
-                            </div>
-                            <!--end item-->
-
-                            <div class="col-md-3 col-sm-6 col-xs-12 text-center margin-bottom">
-                                <div class="ce-feature-box-2 no-margin">
-                                    <div class=" iconbox-medium icon round"><span class="pe-7s-search"></span></div>
-                                    <div class="text-box">
-                                        <h1 class="text-white font-weight-4 less-mar-1 padding-top-1 title">2547</h1>
-                                        <h5 class="text-white">Happy Clients</h5>
-                                    </div>
-                                </div>
-                            </div>
-                            <!--end item-->
-
-                            <div class="col-md-3 col-sm-6 col-xs-12 text-center margin-bottom">
-                                <div class="ce-feature-box-2 no-margin">
-                                    <div class=" iconbox-medium icon round"><span class="pe-7s-cup"></span></div>
-                                    <div class="text-box">
-                                        <h1 class="text-white font-weight-4 less-mar-1 padding-top-1 title">1789</h1>
-                                        <h5 class="text-white">Awards</h5>
-                                    </div>
-                                </div>
-                            </div>
-                            <!--end item-->
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="clearfix"></div>
-            <!-- end section -->
 
             <section class="sec-padding">
                 <div class="container">
@@ -421,32 +290,6 @@
             <div class="clearfix"></div>
             <!-- end section -->
 
-            <section class="sec-padding section-primary">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-sm-12">
-                            <div class="sec-title-container less-padding-3 text-center">
-                                <h2 class="font-weight-6 less-mar-1 line-height-5 text-white">Subscribe to our Newsletter </h2>
-                                <h6 class="text-white">Aliquam ornare hendrerit augue Cras tellus In pulvinar lectus</h6>
-                            </div>
-                        </div>
-                        <div class="clearfix"></div>
-                        <!--end title-->
-
-                        <div class="col-md-10 col-centered">
-                            <div class="ce-feature-box-9">
-                                <input class="newsletter" type="search" placeholder="Email Address">
-                                <input name="search" value="Subscribe" class="newsletter-btn" type="submit">
-                            </div>
-                        </div>
-                        <!--end item-->
-
-                    </div>
-                </div>
-            </section>
-            <div class="clearfix"></div>
-            <!-- end section -->
-
             <div class="sec-padding section-dark">
                 <div class="container">
                     <div class="row">
@@ -454,13 +297,12 @@
                             <div class="footer-logo"><img src="<?php echo site_url('assets/frontend/'); ?>images/logo/logo.png" alt="" /></div>
                             <div class="clearfix"></div>
                             <address class="text-light">
-                                <strong class="text-white">Address:</strong> <br>
-                                No.28 - 63739 street lorem ipsum, <br>
-                                ipsum City, Country
+                                <strong class="text-white">Alamat:</strong> <br>
+                                Jl. Merak No. 13 RT 04 RW 03 Kel. Slawi Kulon - Kec. Slawi <br>
+                                Tegal, Jawa Tengah
                             </address>
-                            <span class="text-light"><strong>Phone:</strong> + 1 (234) 567 8901</span><br>
-                            <span class="text-light"><strong>Email:</strong> email@example.com </span><br>
-                            <span class="text-light"><strong>Fax:</strong> + 1 (234) 567 8901</span>
+                            <span class="text-light"><strong>Phone:</strong> +62 823 2639 5985</span><br>
+                            <span class="text-light"><strong>Email:</strong> admin@primkoppabri.com </span><br>
                             <ul class="footer-social-icons white left-align icons-plain text-center">
                                 <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
                                 <li><a href="#"><i class="fa fa-facebook"></i></a></li>
@@ -471,42 +313,6 @@
                         </div>
                         <!--end item-->
 
-                        <div class="col-md-3 col-xs-12 clearfix margin-bottom">
-                            <h4 class="text-white less-mar3 font-weight-5">About Us</h4>
-                            <div class="clearfix"></div>
-                            <br />
-                            <ul class="footer-quick-links-4 white">
-                                <li><a href="#"><i class="fa fa-angle-right"></i> Placerat bibendum</a></li>
-                                <li><a href="#"><i class="fa fa-angle-right"></i> Ullamcorper odio nec turpis</a></li>
-                                <li><a href="#"><i class="fa fa-angle-right"></i> Aliquam porttitor vestibulum ipsum</a></li>
-                                <li><a href="#"><i class="fa fa-angle-right"></i> Lobortis enim nec nisi</a></li>
-                                <li><a href="#"><i class="fa fa-angle-right"></i> Placerat bibendum</a></li>
-                            </ul>
-                        </div>
-                        <!--end item-->
-
-                        <div class="col-md-3 col-xs-12 clearfix margin-bottom">
-                            <h4 class="text-white less-mar3 font-weight-5">More Services</h4>
-                            <div class="clearfix"></div>
-                            <br />
-                            <ul class="footer-quick-links-4 white">
-                                <li><a href="#"><i class="fa fa-angle-right"></i> Placerat bibendum</a></li>
-                                <li><a href="#"><i class="fa fa-angle-right"></i> Ullamcorper odio nec turpis</a></li>
-                                <li><a href="#"><i class="fa fa-angle-right"></i> Aliquam porttitor vestibulum ipsum</a></li>
-                                <li><a href="#"><i class="fa fa-angle-right"></i> Lobortis enim nec nisi</a></li>
-                                <li><a href="#"><i class="fa fa-angle-right"></i> Placerat bibendum</a></li>
-                            </ul>
-                        </div>
-                        <!--end item-->
-
-                        <div class="col-md-3 col-xs-12 clearfix margin-bottom">
-                            <h4 class="text-white less-mar3 font-weight-5">Flickr Gallery</h4>
-                            <div class="clearfix"></div>
-                            <br />
-                            <ul id="basicuse" class="thumbs">
-                            </ul>
-                        </div>
-                        <!--end item-->
 
                     </div>
                 </div>
@@ -517,7 +323,7 @@
             <section class="sec-padding-6 section-medium-dark">
                 <div class="container">
                     <div class="row">
-                        <div class="fo-copyright-holder text-center"> Copyright © 2019 Codelayers | All rights reserved. </div>
+                        <div class="fo-copyright-holder text-center"> Copyright © 2020 PRIMKOPPABRI | All rights reserved. </div>
                     </div>
                 </div>
             </section>

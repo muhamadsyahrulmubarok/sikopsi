@@ -93,8 +93,7 @@
                                     <td><?= $row['id_anggota']; ?></td>
                                     <td><?= $row['nama_anggota']; ?></td>
                                     <td><?= 'Rp. ' . number_format($row['tabungan'], 0, '.', '.'); ?></td>
-                                    <td><a href="#"><i class="mdi mdi-information-variant"></i></a> || <a href="#" onclick="printExternal('google.com')"><i class="mdi mdi-information-variant"></i></a>
-
+                                    <td><a href="#"><i class="mdi mdi-information-variant"></i></a> || <a href="javacript:" onclick="printExternal('<?= site_url('tabungan/cetak') ?>')" target="_blank"><i class="mdi mdi-printer"></i></a>
                                     </td>
                                 </tr>
                             <?php
@@ -167,23 +166,23 @@
             $('#resort option[value=' + resort + ']').attr('selected', true);
         });
     </script>
-	<script>
-	function printExternal(url) {
-		var printWindow = window.open( url, '_blank', 'Print', 'left=200, top=200, width=950, height=500, toolbar=0, resizable=0');
+    <script>
+        function printExternal(url) {
+            var printWindow = window.open(url);
 
-		printWindow.addEventListener('load', function() {
-			if (Boolean(printWindow.chrome)) {
-				printWindow.print();
-				setTimeout(function(){
-					printWindow.close();
-				}, 500);
-			} else {
-				printWindow.print();
-				printWindow.close();
-			}
-		}, true);
-	}
-</script>
+            printWindow.addEventListener('load', function() {
+                if (Boolean(printWindow.chrome)) {
+                    printWindow.print();
+                    setTimeout(function() {
+                        printWindow.close();
+                    }, 500);
+                } else {
+                    printWindow.print();
+                    printWindow.close();
+                }
+            }, true);
+        }
+    </script>
 </body>
 
 </html>
