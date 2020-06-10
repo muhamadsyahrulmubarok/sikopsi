@@ -115,4 +115,9 @@ class Peminjaman extends CI_Controller
         $this->M_peminjaman->deleteAngsuran($id);
         redirect('peminjaman/lihat?id=' . $r);
     }
+
+    public function cetak()
+    {
+        $this->load->view('backend/v_peminjaman/cetak');
+    }
 }

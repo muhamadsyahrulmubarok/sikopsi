@@ -483,7 +483,9 @@
                 <div class="ce-feature-box-36 margin-bottom">
                   <img src="<?php echo base_url('assets/img_berita/') . $row['img_berita']; ?>" alt="" class="img-responsive" />
                   <div class="text-box">
-                    <p class="text-primary">22 August 2019</p>
+                    <p class="text-primary"><?php
+                                            $date = date_create($row['tgl_berita']);
+                                            echo date_format($date, "d F Y"); ?></p>
                     <a href="#">
                       <h5 class="font-weight-5 less-mar-1"><?= $row['judul_berita']; ?></h5>
                     </a>

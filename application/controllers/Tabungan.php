@@ -24,4 +24,9 @@ class Tabungan extends CI_Controller
 
         $this->load->view('backend/v_tabungan/index', $data);
     }
+
+    public function cetak()
+    {
+        $this->load->view('backend/v_tabungan/cetak');
+    }
 }

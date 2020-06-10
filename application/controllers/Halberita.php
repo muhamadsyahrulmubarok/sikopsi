@@ -17,4 +17,12 @@ class Halberita extends CI_Controller
         );
         $this->load->view('frontend/v_berita/index', $data);
     }
+
+    public function lihat($id)
+    {
+        $data = array(
+            'data' => $this->M_berita->GetBerita($id)->row_array()
+        );
+        $this->load->view('frontend/v_berita/lihat', $data);
+    }
 }

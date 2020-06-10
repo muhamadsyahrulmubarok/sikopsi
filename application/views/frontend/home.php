@@ -387,93 +387,32 @@
                         </div>
                         <div class="clearfix"></div>
                         <!--end title-->
-
-
-                        <div class="col-md-4 col-sm-6 col-xs-12">
-                            <div class="ce-feature-box-28 margin-bottom">
-                                <div class="img-box">
-                                    <div class="overlay">
+                        <?php foreach ($berita as $row) {
+                        ?>
+                            <div class="col-md-4 col-sm-6 col-xs-12">
+                                <div class="ce-feature-box-28 margin-bottom">
+                                    <div class="img-box">
+                                        <div class="overlay">
+                                        </div>
+                                        <img src="<?php echo base_url('assets/img_berita/') . $row['img_berita']; ?>" alt="" class="img-responsive" />
                                     </div>
-                                    <img src="http://via.placeholder.com/1000x800" alt="" class="img-responsive" />
-                                </div>
-                                <div class="text-box padding-4">
-                                    <a href="#">
-                                        <h5 class="font-weight-5">Praesent mattis commodo augue justo amet</h5>
-                                    </a>
-                                    <div class="blog-post-info"> <span><i class="fa fa-user"></i> By codelayers</span> <span><i class="fa fa-comments-o"></i> 15 Comments</span> </div>
-                                    <br />
-                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse et justo. Praesent mattis
-                                        commodot.</p>
-                                    <br />
-                                    <div class="col-md-12 nopadding">
+                                    <div class="text-box padding-4">
                                         <a href="#">
-                                            <div class="icon-b"><i class="fa fa-share-alt" aria-hidden="true"></i></div>
+                                            <h5 class="font-weight-5"><?= $row['judul_berita']; ?></h5>
                                         </a>
-                                        <a href="#">
-                                            <div class="icon-b"><i class="fa fa-heart" aria-hidden="true"></i></div>
-                                        </a>
+                                        <div class="blog-post-info"> <span><i class="fa fa-user"></i> By Admin</span> </div>
+                                        <br />
+                                        <p class="font-weight-5"><?php echo $row['isi_berita']; ?></p>
+                                        <br />
+                                        <div class="col-md-12 nopadding">
+                                            <a href="#">
+                                                <div class="icon-b"><i class="fa fa-heart" aria-hidden="true"></i></div>
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <!--end item-->
-
-                        <div class="col-md-4 col-sm-6 col-xs-12">
-                            <div class="ce-feature-box-28 margin-bottom">
-                                <div class="img-box">
-                                    <div class="overlay">
-                                    </div>
-                                    <img src="http://via.placeholder.com/1000x800" alt="" class="img-responsive" />
-                                </div>
-                                <div class="text-box padding-4 white">
-                                    <a href="#">
-                                        <h5 class="font-weight-5">Praesent mattis commodo augue justo amet</h5>
-                                    </a>
-                                    <div class="blog-post-info"> <span><i class="fa fa-user"></i> By codelayers</span> <span><i class="fa fa-comments-o"></i> 15 Comments</span> </div>
-                                    <br />
-                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse et justo. Praesent mattis
-                                        commodot.</p>
-                                    <br />
-                                    <div class="col-md-12 nopadding">
-                                        <a href="#">
-                                            <div class="icon-b"><i class="fa fa-share-alt" aria-hidden="true"></i></div>
-                                        </a>
-                                        <a href="#">
-                                            <div class="icon-b"><i class="fa fa-heart" aria-hidden="true"></i></div>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!--end item-->
-
-                        <div class="col-md-4 col-sm-6 col-xs-12">
-                            <div class="ce-feature-box-28 margin-bottom">
-                                <div class="img-box">
-                                    <div class="overlay">
-                                    </div>
-                                    <img src="http://via.placeholder.com/1000x800" alt="" class="img-responsive" />
-                                </div>
-                                <div class="text-box padding-4 white">
-                                    <a href="#">
-                                        <h5 class="font-weight-5">Praesent mattis commodo augue justo amet</h5>
-                                    </a>
-                                    <div class="blog-post-info"> <span><i class="fa fa-user"></i> By codelayers</span> <span><i class="fa fa-comments-o"></i> 15 Comments</span> </div>
-                                    <br />
-                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse et justo. Praesent mattis
-                                        commodot.</p>
-                                    <br />
-                                    <div class="col-md-12 nopadding">
-                                        <a href="#">
-                                            <div class="icon-b"><i class="fa fa-share-alt" aria-hidden="true"></i></div>
-                                        </a>
-                                        <a href="#">
-                                            <div class="icon-b"><i class="fa fa-heart" aria-hidden="true"></i></div>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <?php } ?>
                         <!--end item-->
 
                     </div>
