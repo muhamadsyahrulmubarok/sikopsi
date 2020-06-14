@@ -25,8 +25,13 @@ class Tabungan extends CI_Controller
         $this->load->view('backend/v_tabungan/index', $data);
     }
 
-    public function cetak()
+    public function cetak($id)
     {
-        $this->load->view('backend/v_tabungan/cetak');
+        $data = array(
+            'menu' => 'Cetak Tabungan',
+            'anggota' => $this->M_tabungan->GetAnggota($id)->row_array(),
+            'data' => $this->M_tabungan->Cetak($id)->result_array()
+        );
+        $this->load->view('backend/v_tabungan/cetak', $data);
     }
 }

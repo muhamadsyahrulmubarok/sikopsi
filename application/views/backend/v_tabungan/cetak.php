@@ -22,7 +22,7 @@
 
                         </div>
                         <div class="col-md-5">
-                            DARI RESORT : __________________________
+                            DARI RESORT : <?= $anggota['nama_resort']; ?>
                         </div>
                         <div class="col-md-1">
 
@@ -36,16 +36,16 @@
                     <p></p>
                     <div class="row">
                         <div class="col-md-4 flex-wrap">
-                            Nama &nbsp;&nbsp;: _________________________ <br>
-                            Alamat : _________________________
+                            Nama &nbsp;&nbsp;: <?= $anggota['nama_anggota']; ?> <br>
+                            Alamat : <?= $anggota['alamat_anggota']; ?>
                         </div>
                         <div class="col-md-4 flex-wrap">
                             No. Langganan : ________________________ <br>
-                            RT : _____ &nbsp;&nbsp;&nbsp;RW : ______
+                            RT : <?= $anggota['rt_anggota']; ?> &nbsp;&nbsp;&nbsp;RW : <?= $anggota['rw_anggota']; ?>
                         </div>
                         <div class="col-md-4 flex-wrap">
                             <br>
-                            Kelurahan : _________________________
+                            Kelurahan : <?= $anggota['desa_anggota']; ?>
                         </div>
                         <div class="col-md-4">
                         </div>
@@ -78,16 +78,30 @@
                             <th>Keterangan</th>
                         </thead>
                         <tbody>
-                            <td>1</td>
-                            <td>22</td>
-                            <td>22</td>
-                            <td>22</td>
-                            <td>22</td>
-                            <td>-</td>
+                            <?php foreach ($data as $row) {
+                            ?>
+                                <tr>
+                                    <td><?= $row['tgl_drop_tabungan']; ?></td>
+                                    <td><?= $row['no_peminjaman']; ?></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td><?= 'Rp. ' . number_format($row['tabungan'], 0, ',', '.'); ?></td>
+                                    <td>-</td>
+                                </tr>
+                            <?php } ?>
                         </tbody>
                         <tfoot>
                             <th colspan="4">Jumlah</th>
-                            <th>RP. 1000000</th>
+                            <th>
+                                <?php
+                                $total = 0;
+                                foreach ($data as $row) {
+                                    $jumlah = $row['tabungan'];
+                                    $total = $jumlah + $total;
+                                }
+                                echo 'Rp. ' . number_format($total, 0, ',', '.');
+                                ?>
+                            </th>
                             <th></th>
                         </tfoot>
                     </table>

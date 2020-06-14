@@ -42,6 +42,21 @@ class M_tabungan extends CI_Model
         $this->db->where('no_peminjaman', $id);
         return $this->db->delete('tabungan');
     }
+
+    public function Cetak($id)
+    {
+        $this->db->join('anggota', 'anggota.id_anggota = tabungan.id_anggota');
+        $this->db->join('peminjaman', 'peminjaman.no_peminjaman = tabungan.no_peminjaman');
+        $this->db->where('tabungan.id_anggota', $id);
+        return $this->db->get('tabungan');
+    }
+
+    public function GetAnggota($id)
+    {
+        $this->db->join('resort', 'resort.kd_resort = anggota.kd_resort');
+        $this->db->where('id_anggota', $id);
+        return $this->db->get('anggota');
+    }
 }
 
 /* End of file M_tabungan.php */
