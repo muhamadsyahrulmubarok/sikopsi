@@ -5,15 +5,15 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>SIKOPSI </title>
-    <meta name="keywords" content="themeforest template" />
-    <meta name="description" content="best responsive html template in themeforest">
-    <meta name="author" content="codelayers">
+    <meta name="keywords" content="PRIMKOPPABRI" />
+    <meta name="description" content="PRIMKOPPABRI">
+    <meta name="author" content="PRIMKOPPABRI">
 
     <!-- Mobile view -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="<?php echo site_url('assets/frontend/'); ?>images/fav-icon.ico">
+    <link rel="shortcut icon" href="<?php echo base_url(); ?>assets/backend/images/favicon.ico">
     <link rel="stylesheet" type="text/css" href="<?php echo site_url('assets/frontend/'); ?>js/bootstrap/bootstrap.min.css">
 
     <!-- Google fonts  -->
@@ -122,10 +122,10 @@
                     <ul>
 
                         <!-- SLIDE  -->
-                        <li data-index="rs-1" data-transition="fade" data-slotamount="default" data-easein="Power4.easeInOut" data-easeout="Power4.easeInOut" data-masterspeed="2000" data-thumb="https://www.harapanrakyat.com/wp-content/uploads/2019/07/Sawah-Terancam-Kekeringan.jpg" data-rotate="0" data-fstransition="fade" data-fsmasterspeed="1500" data-fsslotamount="7" data-saveperformance="off" data-title="Intro" data-description="">
+                        <li data-index="rs-1" data-transition="fade" data-slotamount="default" data-easein="Power4.easeInOut" data-easeout="Power4.easeInOut" data-masterspeed="2000" data-thumb="<?php echo site_url('assets/frontend/images/sliders/slider01.jpg'); ?>" data-rotate="0" data-fstransition="fade" data-fsmasterspeed="1500" data-fsslotamount="7" data-saveperformance="off" data-title="Intro" data-description="">
 
                             <!-- MAIN IMAGE -->
-                            <img src="https://www.harapanrakyat.com/wp-content/uploads/2019/07/Sawah-Terancam-Kekeringan.jpg" alt="" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina>
+                            <img src="<?php echo site_url('assets/frontend/images/sliders/slider01.jpg'); ?>" alt="" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina>
                             <!-- LAYERS -->
 
                             <!-- LAYER NR. 4 -->
@@ -143,10 +143,10 @@
                         </li>
 
                         <!-- SLIDE  -->
-                        <li data-index="rs-2" data-transition="slidedown" data-slotamount="default" data-easein="Power4.easeInOut" data-easeout="Power4.easeInOut" data-masterspeed="2000" data-thumb="http://via.placeholder.com/60x60" data-rotate="0" data-fstransition="fade" data-fsmasterspeed="1500" data-fsslotamount="7" data-saveperformance="off" data-title="Intro" data-description="">
+                        <li data-index="rs-2" data-transition="slidedown" data-slotamount="default" data-easein="Power4.easeInOut" data-easeout="Power4.easeInOut" data-masterspeed="2000" data-thumb="<?php echo site_url('assets/frontend/images/sliders/slider02.jpg'); ?>" data-rotate="0" data-fstransition="fade" data-fsmasterspeed="1500" data-fsslotamount="7" data-saveperformance="off" data-title="Intro" data-description="">
 
                             <!-- MAIN IMAGE -->
-                            <img src="<?php echo site_url('assets/frontend/'); ?>images/sliders/13.jpg" alt="" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina>
+                            <img src="<?php echo site_url('assets/frontend/images/sliders/slider02.jpg'); ?>" alt="" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina>
                             <!-- LAYERS -->
 
                             <!-- LAYER NR. 1 -->
@@ -164,11 +164,11 @@
                         </li>
 
                         <!-- SLIDE  -->
-                        <li data-index="rs-3" data-transition="slidedown" data-slotamount="default" data-easein="Power4.easeInOut" data-easeout="Power4.easeInOut" data-masterspeed="2000" data-thumb="http://via.placeholder.com/60x60" data-rotate="0" data-fstransition="fade" data-fsmasterspeed="1500" data-fsslotamount="7" data-saveperformance="off" data-title="Intro" data-description="">
+                        <li data-index="rs-3" data-transition="slidedown" data-slotamount="default" data-easein="Power4.easeInOut" data-easeout="Power4.easeInOut" data-masterspeed="2000" data-thumb="<?php echo site_url('assets/frontend/images/sliders/slider03.jpg'); ?>" data-rotate="0" data-fstransition="fade" data-fsmasterspeed="1500" data-fsslotamount="7" data-saveperformance="off" data-title="Intro" data-description="">
 
 
                             <!-- MAIN IMAGE -->
-                            <img src="<?php echo site_url('assets/frontend/'); ?>images/sliders/13.jpg" alt="" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina>
+                            <img src="<?php echo site_url('assets/frontend/images/sliders/slider03.jpg'); ?>" alt="" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina>
                             <!-- LAYERS -->
 
                             <!-- LAYER NR. 1 -->
@@ -202,7 +202,7 @@
                                 <div class="col-md-6 nopadding">
                                     <div class="img-box">
                                         <div class="overlay"></div>
-                                        <img src="<?php echo site_url('assets/frontend/'); ?>images/7.jpg" alt="" class="img-responsive" />
+                                        <img src="<?php echo site_url('assets/frontend/'); ?>images/profil.jpeg" alt="" class="img-responsive" />
                                     </div>
                                 </div>
                                 <div class="col-md-6 col-sm-12 col-xs-12 nopadding">
@@ -301,7 +301,7 @@
                                 Jl. Merak No. 13 RT 04 RW 03 Kel. Slawi Kulon - Kec. Slawi <br>
                                 Tegal, Jawa Tengah
                             </address>
-                            <span class="text-light"><strong>Phone:</strong> +62 823 2639 5985</span><br>
+                            <span class="text-light"><strong>No. Telp Aduan:</strong> +62 823-2639-5985</span><br>
                             <span class="text-light"><strong>Email:</strong> admin@primkoppabri.com </span><br>
                             <ul class="footer-social-icons white left-align icons-plain text-center">
                                 <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>

@@ -30,15 +30,18 @@ class M_peminjaman extends CI_Model
     }
     public function GetLaporan($bulan = null, $tahun = null)
     {
+        $this->db->join('anggota', 'anggota.id_anggota = peminjaman.id_anggota');
+        $this->db->join('resort', 'resort.kd_resort = anggota.kd_resort');
         if ($bulan && $tahun) {
-            $query = $this->db->query('SELECT * FROM peminjaman JOIN anggota ON anggota.id_anggota = peminjaman.id_anggota JOIN resort ON resort.kd_resort = anggota.kd_resort WHERE YEAR(peminjaman.tgl_drop) = ' . $tahun . ' AND MONTH(peminjaman.tgl_drop) = ' . $bulan);
+            $this->db->where('MONTH(peminjaman.tgl_drop)', $bulan);
+            $this->db->where('YEAR(peminjaman.tgl_drop)', $tahun);
+            return $this->db->get('peminjaman');
         } elseif ($tahun) {
-            $query = $this->db->query('SELECT * FROM peminjaman JOIN anggota ON anggota.id_anggota = peminjaman.id_anggota WHERE YEAR(peminjaman.tgl_drop) = ' . $tahun);
+            $this->db->where('YEAR(peminjaman.tgl_drop)', $tahun);
+            return $this->db->get('peminjaman');
         } else {
-            $query = $this->db->query('SELECT * FROM peminjaman JOIN anggota ON anggota.id_anggota = peminjaman.id_anggota');
+            return $this->db->get('peminjaman');
         }
-
-        return $query;
     }
 
     public function GetLastPeminjaman()

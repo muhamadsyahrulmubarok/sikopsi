@@ -16,7 +16,8 @@ class Angsuran extends CI_Controller
         $no = str_replace('%2F', '/', $this->input->get('no'));
 
         $data = array(
-            'data' => $this->M_angsuran->GetAngsuran($id, $no)->row_array()
+            'data' => $this->M_angsuran->GetAnggota($id, $no)->row_array(),
+            'angsuran' => $this->M_angsuran->GetAngsuran($id, $no)->result_array()
         );
         $this->load->view('frontend/v_angsuran/index', $data);
     }

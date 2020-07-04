@@ -104,6 +104,21 @@
                                 $no++;
                             } ?>
                         </tbody>
+
+                        <tfoot class="text-center">
+                            <tr>
+                                <td colspan="5">Total</td>
+                                <td>
+                                    <?php
+                                    $total = 0;
+                                    foreach ($data as $row) {
+                                        $total = $row['total_pinjaman'] + $total;
+                                    }
+                                    echo 'Rp. ' . number_format($total, 0, '', '.');
+                                    ?>
+                                </td>
+                            </tr>
+                        </tfoot>
                     </table>
                 </div> <!-- end card-box -->
             </div> <!-- end col -->
