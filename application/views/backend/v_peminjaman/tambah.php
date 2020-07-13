@@ -41,6 +41,12 @@
 
                     <form class="form-horizontal" action="<?php echo site_url('peminjaman/simpan'); ?>" method="POST">
                         <div class="form-group row">
+                            <label class="col-sm-2 col-form-label" for="no_peminjaman">No Peminjaman</label>
+                            <div class="col-sm-10">
+                                <input type="text" id="no_peminjaman" name="no_peminjaman" class="form-control" placeholder="No Peminjaman" value="<?= $no; ?>" readonly>
+                            </div>
+                        </div>
+                        <div class="form-group row">
                             <label class="col-sm-2 col-form-label" for="nama_anggota">Nama Peminjam</label>
                             <div class="col-sm-10">
                                 <select name="id_anggota" id="id_anggota" class="form-control" data-toggle="select2">
@@ -57,7 +63,7 @@
                         <div class="form-group row">
                             <label class="col-sm-2 col-form-label" for="tgl_drop">Tanggal Drop</label>
                             <div class="col-sm-10">
-                                <input type="date" id="tgl_drop" name="tgl_drop" class="form-control" placeholder="Tanggal Drop">
+                                <input type="date" id="tgl_drop" name="tgl_drop" class="form-control" placeholder="Tanggal Drop" value="<?= date('Y-m-d'); ?>">
                             </div>
                         </div>
                         <div class="form-group row">
@@ -151,6 +157,8 @@
     <!-- Mask input -->
     <script src="<?php echo base_url(); ?>assets/backend/libs/jquery-mask-plugin/jquery.mask.min.js"></script>
 
+    <script src="<?php echo base_url(); ?>assets/backend/libs/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
+
     <script>
         $('[data-toggle="select2"]').select2();
 
@@ -158,6 +166,7 @@
             reverse: true
         });
     </script>
+
     <script>
         function hitung() {
             var x = document.getElementById("pinjaman_pokok").value;

@@ -99,6 +99,14 @@ class M_peminjaman extends CI_Model
         $this->db->delete('angsuran');
         return $this->db->affected_rows();
     }
+
+    public function GetNo()
+    {
+        $tgl = date('Y-m-d');
+        $this->db->where('tgl_drop', $tgl);
+        $q = $this->db->get('peminjaman');
+        return $q->num_rows();
+    }
 }
 
 /* End of file M_peminjaman.php */

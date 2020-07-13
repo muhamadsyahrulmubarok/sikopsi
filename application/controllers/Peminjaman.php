@@ -25,7 +25,11 @@ class Peminjaman extends CI_Controller
 
     public function tambah()
     {
+        $no = '001';
+        $no_terakhir = $this->M_peminjaman->GetNo();
+        $no = $no + $no_terakhir;
         $data = array(
+            'no' => date('Ymd') . '-' . str_pad($no, 3, "0", STR_PAD_LEFT),
             'anggota' => $this->M_anggota->GetAll()->result_array(),
             'menu' => "Peminjaman",
             'sub_menu' => "Tambah",
@@ -36,12 +40,9 @@ class Peminjaman extends CI_Controller
 
     public function simpan()
     {
-        $last_row = $this->M_peminjaman->GetLastPeminjaman();
-        $no = explode("/", $last_row['no_peminjaman']);
         $id_anggota = $this->input->post('id_anggota');
-        $kd_resort =  $this->M_anggota->GetAnggota($id_anggota)->row_array()['kd_resort'];
         $data = array(
-            'no_peminjaman' => $no[0] + 1 . '/' . $kd_resort . '/' . date('m'),
+            'no_peminjaman' => $this->input->post('no_peminjaman'),
             'tgl_drop' => $this->input->post('tgl_drop'),
             'pinjaman_pokok' => str_replace('.', '', $this->input->post('pinjaman_pokok')),
             'jasa_peminjaman' => $this->input->post('jasa_peminjaman'),
@@ -54,7 +55,7 @@ class Peminjaman extends CI_Controller
         );
 
         $tabungan = array(
-            'no_peminjaman' => $no[0] + 1 . '/' . $kd_resort . '/' . date('m'),
+            'no_peminjaman' => $this->input->post('no_peminjaman'),
             'tgl_drop_tabungan' => $this->input->post('tgl_drop'),
             'id_anggota' => $id_anggota,
             'tabungan' => str_replace('.', '', $this->input->post('pinjaman_pokok')) * 5 / 100
