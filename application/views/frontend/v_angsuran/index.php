@@ -171,6 +171,7 @@
                                             No Anggota : <?= $data['id_anggota']; ?><br>
                                             Nama : <?= $data['nama_anggota']; ?><br>
                                             Jumlah Pinjaman : <?= $data['total_pinjaman']; ?><br>
+                                            Keterangan : <?= $data['keterangan']; ?><br>
                                             <table class="table table-bordered text-center">
                                                 <tr>
                                                     <th colspan="2">Daftar Angsuran</th>

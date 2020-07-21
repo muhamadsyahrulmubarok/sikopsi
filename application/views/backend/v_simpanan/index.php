@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>Tabungan - SIKOPSI</title>
+    <title>Simpanan - SIKOPSI</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
     <meta content="Coderthemes" name="author" />
@@ -68,7 +68,7 @@
                     </form>
 
                     <div class="dropdown-divider"></div>
-                    <h4 class="header-title">Data Tabungan</h4>
+                    <h4 class="header-title">Data Simpanan</h4>
 
                     <div class="dropdown-divider"></div>
                     <table id="datatable" class="table table-bordered nowrap table-responsive-md">
@@ -77,7 +77,7 @@
                                 <th>No</th>
                                 <th>Kode Anggota</th>
                                 <th>Nama Anggota</th>
-                                <th>Total Tabungan</th>
+                                <th>Total Simpanan</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
@@ -92,8 +92,8 @@
                                     <td><?= $no; ?></td>
                                     <td><?= $row['id_anggota']; ?></td>
                                     <td><?= $row['nama_anggota']; ?></td>
-                                    <td><?= 'Rp. ' . number_format($row['tabungan'], 0, '.', '.'); ?></td>
-                                    <td><a href="#"><i class="mdi mdi-information-variant"></i></a> || <a href="javacript:" onclick="printExternal('<?= site_url('tabungan/cetak/') . $row['id_anggota'] ?>')" target="_blank"><i class="mdi mdi-printer"></i></a>
+                                    <td><?= 'Rp. ' . number_format($row['simpanan'], 0, '.', '.'); ?></td>
+                                    <td><a href="#"><i class="mdi mdi-information-variant"></i></a> || <a href="javacript:" onclick="printExternal('<?= site_url('simpanan/cetak/') . $row['id_anggota'] ?>')" target="_blank"><i class="mdi mdi-printer"></i></a>
                                     </td>
                                 </tr>
                             <?php

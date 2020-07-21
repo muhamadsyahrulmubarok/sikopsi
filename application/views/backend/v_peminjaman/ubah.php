@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>Tambah Peminjaman - SIKOPSI</title>
+    <title>Ubah Peminjaman - SIKOPSI</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
     <meta content="Coderthemes" name="author" />
@@ -39,7 +39,13 @@
                 <div class="card-box">
                     <h4 class="header-title">Form Tambah Peminjaman</h4>
 
-                    <form class="form-horizontal" action="<?php echo site_url('peminjaman/simpan'); ?>" method="POST">
+                    <form class="form-horizontal" action="<?php echo site_url('peminjaman/update/') . $this->uri->segment(3); ?>" method="POST">
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label" for="no_peminjaman">No Peminjaman</label>
+                            <div class="col-sm-10">
+                                <input type="text" id="no_peminjaman" name="no_peminjaman" class="form-control" placeholder="No Peminjaman" value="<?= $data['no_peminjaman']; ?>" readonly>
+                            </div>
+                        </div>
                         <div class="form-group row">
                             <label class="col-sm-2 col-form-label" for="nama_anggota">Nama Peminjam</label>
                             <div class="col-sm-10">
@@ -48,7 +54,9 @@
                                     <?php
                                     foreach ($anggota as $row) {
                                     ?>
-                                        <option value="<?= $row['id_anggota']; ?>"><?= $row['id_anggota']; ?> - <?= $row['nama_anggota']; ?></option>
+                                        <option value="<?= $row['id_anggota']; ?>" <?php if ($data['id_anggota'] == $row['id_anggota']) {
+                                                                                        echo 'selected';
+                                                                                    } ?>><?= $row['id_anggota']; ?> - <?= $row['nama_anggota']; ?></option>
                                     <?php } ?>
                                 </select>
 
@@ -57,37 +65,37 @@
                         <div class="form-group row">
                             <label class="col-sm-2 col-form-label" for="tgl_drop">Tanggal Drop</label>
                             <div class="col-sm-10">
-                                <input type="date" id="tgl_drop" name="tgl_drop" class="form-control" placeholder="Tanggal Drop">
+                                <input type="date" id="tgl_drop" name="tgl_drop" class="form-control" placeholder="Tanggal Drop" value="<?= $data['tgl_drop']; ?>">
                             </div>
                         </div>
                         <div class="form-group row">
                             <label class="col-sm-2 col-form-label">Pinjaman Pokok</label>
                             <div class="col-sm-10">
-                                <input type="text" id="pinjaman_pokok" name="pinjaman_pokok" class="form-control nominal" placeholder="Pinjaman Pokok" onchange="hitung()">
+                                <input type="text" id="pinjaman_pokok" name="pinjaman_pokok" class="form-control nominal" placeholder="Pinjaman Pokok" onchange="hitung()" value="<?= $data['pinjaman_pokok']; ?>">
                             </div>
                         </div>
                         <div class="form-group row">
                             <label class="col-sm-2 col-form-label">Jasa Peminjaman</label>
                             <div class="col-sm-10">
-                                <input type="text" id="jasa_peminjaman" name="jasa_peminjaman" class="form-control nominal" placeholder="Jasa Peminjaman" readonly>
+                                <input type="text" id="jasa_peminjaman" name="jasa_peminjaman" class="form-control nominal" placeholder="Jasa Peminjaman" readonly value="<?= $data['jasa_peminjaman']; ?>">
                             </div>
                         </div>
                         <div class="form-group row">
                             <label class="col-sm-2 col-form-label">Jasa Pelayanan</label>
                             <div class="col-sm-10">
-                                <input type="text" id="jasa_pelayanan" name="jasa_pelayanan" class="form-control nominal" placeholder="Jasa Pelayanan" readonly>
+                                <input type="text" id="jasa_pelayanan" name="jasa_pelayanan" class="form-control nominal" placeholder="Jasa Pelayanan" readonly value="<?= $data['jasa_pelayanan']; ?>">
                             </div>
                         </div>
                         <div class="form-group row">
                             <label class="col-sm-2 col-form-label">Resiko Kredit</label>
                             <div class="col-sm-10">
-                                <input type="text" id="resiko_kredit" name="resiko_kredit" class="form-control nominal" placeholder="Resiko Kredit" readonly>
+                                <input type="text" id="resiko_kredit" name="resiko_kredit" class="form-control nominal" placeholder="Resiko Kredit" readonly value="<?= $data['resiko_kredit']; ?>">
                             </div>
                         </div>
                         <div class="form-group row">
                             <label class="col-sm-2 col-form-label">Total Pinjaman</label>
                             <div class="col-sm-10">
-                                <input type="text" id="total_pinjaman" name="total_pinjaman" class="form-control" placeholder="Total Pinjaman" readonly>
+                                <input type="text" id="total_pinjaman" name="total_pinjaman" class="form-control" placeholder="Total Pinjaman" readonly value="<?= $data['total_pinjaman']; ?>">
                             </div>
                         </div>
                         <div class="form-group row">
@@ -100,7 +108,7 @@
                         <div class="form-group row">
                             <div class="col-sm-2"></div>
                             <div class="col-sm-5">
-                                <button type="submit" class="btn btn-info waves-effect waves-light">Simpan</button>
+                                <button type="submit" class="btn btn-info waves-effect waves-light">Ubah</button>
                                 <a href="<?php echo site_url('peminjaman'); ?>" class="btn btn-danger waves-effect waves-light">Kembali</a>
                             </div>
                         </div>
@@ -121,8 +129,7 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12 text-center">
-                    2020 &copy; PRIMKOPPABRI USP 20 Slawi
-                </div>
+                    2020 &copy; PRIMKOPPABRI USP 20 Slawi </div>
             </div>
         </div>
     </footer>
@@ -152,6 +159,8 @@
     <!-- Mask input -->
     <script src="<?php echo base_url(); ?>assets/backend/libs/jquery-mask-plugin/jquery.mask.min.js"></script>
 
+    <script src="<?php echo base_url(); ?>assets/backend/libs/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
+
     <script>
         $('[data-toggle="select2"]').select2();
 
@@ -159,6 +168,7 @@
             reverse: true
         });
     </script>
+
     <script>
         function hitung() {
             var x = document.getElementById("pinjaman_pokok").value;

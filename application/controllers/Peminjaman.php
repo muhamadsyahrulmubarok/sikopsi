@@ -7,7 +7,7 @@ class Peminjaman extends CI_Controller
     public function __construct()
     {
         parent::__construct();
-        $this->load->model(array('M_admin', 'M_peminjaman', 'M_anggota', 'M_tabungan'));
+        $this->load->model(array('M_admin', 'M_peminjaman', 'M_anggota', 'M_simpanan'));
     }
 
     public function index()
@@ -51,18 +51,19 @@ class Peminjaman extends CI_Controller
             'total_pinjaman' => $this->input->post('total_pinjaman'),
             'angsuran' => $this->input->post('angsuran'),
             'id_anggota' => $id_anggota,
-            'id_admin' => $this->session->userdata('id_admin')
+            'id_admin' => $this->session->userdata('id_admin'),
+            'keterangan' => 'Proses'
         );
 
-        $tabungan = array(
+        $simpanan = array(
             'no_peminjaman' => $this->input->post('no_peminjaman'),
-            'tgl_drop_tabungan' => $this->input->post('tgl_drop'),
+            'tgl_drop_simpanan' => $this->input->post('tgl_drop'),
             'id_anggota' => $id_anggota,
-            'tabungan' => str_replace('.', '', $this->input->post('pinjaman_pokok')) * 5 / 100
+            'simpanan' => str_replace('.', '', $this->input->post('pinjaman_pokok')) * 5 / 100
         );
 
         $this->M_peminjaman->insert($data);
-        $this->M_tabungan->insert($tabungan);
+        $this->M_simpanan->insert($simpanan);
         $this->session->set_flashdata('message', '<div class="alert alert-success alert-dismissible" role="alert"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>Data berhasil di simpan</div>');
         redirect('peminjaman', 'refresh');
     }
@@ -72,7 +73,7 @@ class Peminjaman extends CI_Controller
     {
         $id = $this->input->get('id');
 
-        $this->M_tabungan->delete($id);
+        $this->M_simpanan->delete($id);
         $this->M_peminjaman->delete($id);
         $this->session->set_flashdata('message', '<div class="alert alert-danger alert-dismissible" role="alert"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>Data berhasil di hapus</div>');
         redirect('peminjaman', 'refresh');
@@ -98,6 +99,12 @@ class Peminjaman extends CI_Controller
     {
         $id = $this->input->get('id');
 
+        if ($this->input->post('angsuran_ke') == '10') {
+            $data['keterangan'] = 'Lunas';
+            $this->M_peminjaman->update($id, $data);
+        }
+
+
         $data = array(
             'tgl_angsuran' => $this->input->post('tgl_angsuran'),
             'nominal_angsuran' => str_replace('.', '', $this->input->post('nominal_angsuran')),
@@ -120,5 +127,44 @@ class Peminjaman extends CI_Controller
     public function cetak()
     {
         $this->load->view('backend/v_peminjaman/cetak');
+    }
+
+    public function ubah($id)
+    {
+        $data = array(
+            'anggota' => $this->M_anggota->GetAll()->result_array(),
+            'menu' => "Peminjaman",
+            'sub_menu' => "Ubah",
+            'admin' => $this->M_admin->GetLoginAdmin()->row_array(),
+            'data' => $this->M_peminjaman->GetPeminjaman($id)->row_array()
+        );
+        $this->load->view('backend/v_peminjaman/ubah', $data);
+    }
+
+    public function update($id)
+    {
+        $id_anggota = $this->input->post('id_anggota');
+        $data = array(
+            'tgl_drop' => $this->input->post('tgl_drop'),
+            'pinjaman_pokok' => str_replace('.', '', $this->input->post('pinjaman_pokok')),
+            'jasa_peminjaman' => $this->input->post('jasa_peminjaman'),
+            'jasa_pelayanan' => $this->input->post('jasa_pelayanan'),
+            'resiko_kredit' => $this->input->post('resiko_kredit'),
+            'total_pinjaman' => $this->input->post('total_pinjaman'),
+            'id_anggota' => $id_anggota,
+        );
+
+        $this->M_simpanan->delete($id);
+        $simpanan = array(
+            'no_peminjaman' => $this->input->post('no_peminjaman'),
+            'tgl_drop_simpanan' => $this->input->post('tgl_drop'),
+            'id_anggota' => $id_anggota,
+            'simpanan' => str_replace('.', '', $this->input->post('pinjaman_pokok')) * 5 / 100
+        );
+
+        $this->M_peminjaman->update($id, $data);
+        $this->M_simpanan->insert($simpanan);
+        $this->session->set_flashdata('message', '<div class="alert alert-success alert-dismissible" role="alert"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>Data berhasil di ubah</div>');
+        redirect('peminjaman', 'refresh');
     }
 }

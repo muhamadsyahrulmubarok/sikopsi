@@ -114,9 +114,9 @@
                 </li>
 
                 <li>
-                    <a href="<?php echo site_url('tabungan'); ?>">
+                    <a href="<?php echo site_url('simpanan'); ?>">
                         <i class="dripicons-briefcase"></i>
-                        <span> Tabungan </span>
+                        <span> Simpanan </span>
                     </a>
                 </li>
 

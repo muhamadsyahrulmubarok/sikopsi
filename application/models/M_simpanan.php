@@ -3,13 +3,13 @@
 
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class M_tabungan extends CI_Model
+class M_simpanan extends CI_Model
 {
     public function GetByName($hari = null, $resort = null)
     {
         $this->db->select('*');
-        $this->db->select_sum('tabungan');
-        $this->db->join('anggota', 'anggota.id_anggota = tabungan.id_anggota');
+        $this->db->select_sum('simpanan');
+        $this->db->join('anggota', 'anggota.id_anggota = simpanan.id_anggota');
         $this->db->join('hari', 'hari.id_hari = anggota.id_hari');
         $this->db->join('resort', 'resort.kd_resort = anggota.kd_resort');
 
@@ -28,27 +28,27 @@ class M_tabungan extends CI_Model
             $this->db->group_end();
         }
 
-        $this->db->group_by('tabungan.id_anggota');
-        return $this->db->get('tabungan');
+        $this->db->group_by('simpanan.id_anggota');
+        return $this->db->get('simpanan');
     }
 
     public function insert($data)
     {
-        return $this->db->insert('tabungan', $data);
+        return $this->db->insert('simpanan', $data);
     }
 
     public function delete($id)
     {
         $this->db->where('no_peminjaman', $id);
-        return $this->db->delete('tabungan');
+        return $this->db->delete('simpanan');
     }
 
     public function Cetak($id)
     {
-        $this->db->join('anggota', 'anggota.id_anggota = tabungan.id_anggota');
-        $this->db->join('peminjaman', 'peminjaman.no_peminjaman = tabungan.no_peminjaman');
-        $this->db->where('tabungan.id_anggota', $id);
-        return $this->db->get('tabungan');
+        $this->db->join('anggota', 'anggota.id_anggota = simpanan.id_anggota');
+        $this->db->join('peminjaman', 'peminjaman.no_peminjaman = simpanan.no_peminjaman');
+        $this->db->where('simpanan.id_anggota', $id);
+        return $this->db->get('simpanan');
     }
 
     public function GetAnggota($id)

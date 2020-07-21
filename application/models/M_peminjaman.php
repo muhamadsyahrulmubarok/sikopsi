@@ -107,6 +107,12 @@ class M_peminjaman extends CI_Model
         $q = $this->db->get('peminjaman');
         return $q->num_rows();
     }
+
+    public function update($id, $data)
+    {
+        $this->db->where('no_peminjaman', $id);
+        return $this->db->update('peminjaman', $data);
+    }
 }
 
 /* End of file M_peminjaman.php */

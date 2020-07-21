@@ -57,11 +57,11 @@
                         <div class="row">
                             <div class="col-md-3 form-group">
                                 <label for="">Nominal Angsuran</label> <br>
-                                <input type="number" name="nominal_angsuran" class="form-control nominal">
+                                <input type="number" name="nominal_angsuran" class="form-control nominal" value="<?= $data['total_pinjaman'] / 10 ?>">
                             </div>
                             <div class="col-md-3 form-group">
                                 <label for="">Angsuran Ke</label> <br>
-                                <input type="number" name="angsuran_ke" class="form-control">
+                                <input type="number" name="angsuran_ke" class="form-control" value="<?= $angsuran_ke + 1 ?>">
                             </div>
                             <div class="col-md-3 form-group">
                                 <label for="">Tanggal Angsuran </label><br>
@@ -69,7 +69,15 @@
                             </div>
                             <div class="col-md-2 form-group">
                                 <br>
-                                <button type="submit" class="btn btn-primary" class="form-control">Simpan</button>
+                                <?php
+                                if ($angsuran_ke == '10') {
+
+                                ?>
+                                    <a href="javascript:;" onclick="alert2()" class="btn btn-primary" class="form-control">Simpan</a>
+                                <?php } else {
+                                ?>
+                                    <button type="submit" class="btn btn-primary" class="form-control">Simpan</button>
+                                <?php } ?>
                             </div>
                         </div>
                     </form>
@@ -186,6 +194,14 @@
                 } else {
                     t.dismiss === Swal.DismissReason.cancel
                 }
+            })
+        }
+
+        function alert2() {
+            Swal.fire({
+                title: "Error!!",
+                text: "Angsuran Sudah Lunas",
+                type: "danger"
             })
         }
     </script>

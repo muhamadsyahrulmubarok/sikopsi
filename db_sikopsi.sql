@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 13 Jul 2020 pada 14.54
+-- Waktu pembuatan: 21 Jul 2020 pada 16.12
 -- Versi server: 10.4.8-MariaDB
 -- Versi PHP: 7.3.11
 
@@ -91,6 +91,22 @@ CREATE TABLE `angsuran` (
   `no_peminjaman` varchar(12) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data untuk tabel `angsuran`
+--
+
+INSERT INTO `angsuran` (`id_angsuran`, `tgl_angsuran`, `angsuran_ke`, `nominal_angsuran`, `id_admin`, `no_peminjaman`) VALUES
+(9, '2020-07-14', '1', 144000, 4, '20200713-002'),
+(10, '2020-07-15', '2', 144000, 4, '20200713-002'),
+(11, '2020-07-16', '3', 144000, 4, '20200713-002'),
+(12, '2020-07-17', '4', 144000, 4, '20200713-002'),
+(13, '2020-07-18', '5', 144000, 4, '20200713-002'),
+(14, '2020-07-19', '6', 144000, 4, '20200713-002'),
+(15, '2020-07-20', '7', 144000, 4, '20200713-002'),
+(16, '2020-07-21', '8', 144000, 4, '20200713-002'),
+(17, '2020-07-22', '9', 144000, 4, '20200713-002'),
+(18, '2020-07-24', '10', 144000, 4, '20200713-002');
+
 -- --------------------------------------------------------
 
 --
@@ -176,16 +192,17 @@ CREATE TABLE `peminjaman` (
   `total_pinjaman` int(12) NOT NULL,
   `angsuran` int(4) NOT NULL,
   `id_anggota` int(11) NOT NULL,
-  `id_admin` int(2) NOT NULL
+  `id_admin` int(2) NOT NULL,
+  `keterangan` varchar(6) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data untuk tabel `peminjaman`
 --
 
-INSERT INTO `peminjaman` (`no_peminjaman`, `tgl_drop`, `pinjaman_pokok`, `jasa_peminjaman`, `jasa_pelayanan`, `resiko_kredit`, `total_pinjaman`, `angsuran`, `id_anggota`, `id_admin`) VALUES
-('20200713-001', '2020-07-13', 930000, 83700, 83700, 18600, 1116000, 10, 11, 4),
-('20200713-002', '2020-07-13', 1200000, 108000, 108000, 24000, 1440000, 10, 10, 4);
+INSERT INTO `peminjaman` (`no_peminjaman`, `tgl_drop`, `pinjaman_pokok`, `jasa_peminjaman`, `jasa_pelayanan`, `resiko_kredit`, `total_pinjaman`, `angsuran`, `id_anggota`, `id_admin`, `keterangan`) VALUES
+('20200713-001', '2020-07-13', 930000, 83700, 83700, 18600, 1116000, 10, 11, 4, 'Proses'),
+('20200713-002', '2020-07-13', 1200000, 108000, 108000, 24000, 1440000, 10, 10, 4, 'Lunas');
 
 -- --------------------------------------------------------
 
@@ -214,22 +231,22 @@ INSERT INTO `resort` (`kd_resort`, `nama_resort`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tabungan`
+-- Struktur dari tabel `simpanan`
 --
 
-CREATE TABLE `tabungan` (
-  `id_tabungan` int(11) NOT NULL,
+CREATE TABLE `simpanan` (
+  `id_simpanan` int(11) NOT NULL,
   `no_peminjaman` varchar(12) NOT NULL,
   `id_anggota` int(11) NOT NULL,
-  `tgl_drop_tabungan` date NOT NULL,
-  `tabungan` int(11) NOT NULL
+  `tgl_drop_simpanan` date NOT NULL,
+  `simpanan` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `tabungan`
+-- Dumping data untuk tabel `simpanan`
 --
 
-INSERT INTO `tabungan` (`id_tabungan`, `no_peminjaman`, `id_anggota`, `tgl_drop_tabungan`, `tabungan`) VALUES
+INSERT INTO `simpanan` (`id_simpanan`, `no_peminjaman`, `id_anggota`, `tgl_drop_simpanan`, `simpanan`) VALUES
 (10, '20200713-002', 10, '2020-07-13', 60000);
 
 --
@@ -293,10 +310,10 @@ ALTER TABLE `resort`
   ADD PRIMARY KEY (`kd_resort`);
 
 --
--- Indeks untuk tabel `tabungan`
+-- Indeks untuk tabel `simpanan`
 --
-ALTER TABLE `tabungan`
-  ADD PRIMARY KEY (`id_tabungan`),
+ALTER TABLE `simpanan`
+  ADD PRIMARY KEY (`id_simpanan`),
   ADD KEY `id_anggota` (`id_anggota`),
   ADD KEY `no_peminjaman` (`no_peminjaman`);
 
@@ -320,7 +337,7 @@ ALTER TABLE `anggota`
 -- AUTO_INCREMENT untuk tabel `angsuran`
 --
 ALTER TABLE `angsuran`
-  MODIFY `id_angsuran` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id_angsuran` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT untuk tabel `berita`
@@ -341,10 +358,10 @@ ALTER TABLE `karyawan`
   MODIFY `id_karyawan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT untuk tabel `tabungan`
+-- AUTO_INCREMENT untuk tabel `simpanan`
 --
-ALTER TABLE `tabungan`
-  MODIFY `id_tabungan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+ALTER TABLE `simpanan`
+  MODIFY `id_simpanan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
@@ -373,11 +390,11 @@ ALTER TABLE `peminjaman`
   ADD CONSTRAINT `peminjaman_ibfk_2` FOREIGN KEY (`id_admin`) REFERENCES `admin` (`id_admin`);
 
 --
--- Ketidakleluasaan untuk tabel `tabungan`
+-- Ketidakleluasaan untuk tabel `simpanan`
 --
-ALTER TABLE `tabungan`
-  ADD CONSTRAINT `tabungan_ibfk_2` FOREIGN KEY (`id_anggota`) REFERENCES `anggota` (`id_anggota`),
-  ADD CONSTRAINT `tabungan_ibfk_3` FOREIGN KEY (`no_peminjaman`) REFERENCES `peminjaman` (`no_peminjaman`);
+ALTER TABLE `simpanan`
+  ADD CONSTRAINT `simpanan_ibfk_2` FOREIGN KEY (`id_anggota`) REFERENCES `anggota` (`id_anggota`),
+  ADD CONSTRAINT `simpanan_ibfk_3` FOREIGN KEY (`no_peminjaman`) REFERENCES `peminjaman` (`no_peminjaman`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

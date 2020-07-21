@@ -88,6 +88,7 @@
                                 <th>No Peminjaman</th>
                                 <th>Nama Anggota</th>
                                 <th>Total Pinjam</th>
+                                <th>Keterangan</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
@@ -103,7 +104,8 @@
                                     <td><?= $row['no_peminjaman']; ?></td>
                                     <td><?= $row['nama_anggota']; ?></td>
                                     <td><?= 'Rp. ' . number_format($row['total_pinjaman'], 0, '.', '.'); ?></td>
-                                    <td><a href="<?php echo site_url('peminjaman/lihat?id=') . $row['no_peminjaman']; ?>"><i class=" mdi mdi-information-variant"></i></a> | <a href="javascript:void(0);" onclick="alert('<?= $row['no_peminjaman'] ?>')"><i class="mdi mdi mdi-delete"></i></a>
+                                    <td><?= $row['keterangan']; ?></td>
+                                    <td><a href="<?php echo site_url('peminjaman/lihat?id=') . $row['no_peminjaman']; ?>"><i class=" mdi mdi-information-variant"></i></a> | <a href="<?php echo site_url('peminjaman/ubah/') . $row['no_peminjaman']; ?>"><i class="mdi mdi mdi-account-edit"></i></a>
                                     </td>
                                 </tr>
                             <?php
