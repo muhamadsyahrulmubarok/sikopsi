@@ -107,7 +107,31 @@
                         <div class="form-group row">
                             <label class="col-sm-2 col-form-label" for="usaha_anggota">Usaha Anggota</label>
                             <div class="col-sm-10">
-                                <input type="text" id="usaha_anggota" name="usaha_anggota" class="form-control" placeholder="Usaha" value="<?= $data['usaha_anggota']; ?>">
+                                <div class="radio radio-success mb-2">
+                                    <input type="radio" id="radio1" value="Petani" name="usaha_anggota" <?php if ($data['usaha_anggota'] == 'Petani') {
+                                                                                                            echo 'checked';
+                                                                                                        } ?>>
+                                    <label for="radio1">
+                                        Petani
+                                    </label>
+                                </div>
+                                <div class="radio radio-success mb-2">
+                                    <input type="radio" id="radio2" value="Dagang" name="usaha_anggota" <?php if ($data['usaha_anggota'] == 'Dagang') {
+                                                                                                            echo 'checked';
+                                                                                                        } ?>>
+                                    <label for="radio2">
+                                        Dagang
+                                    </label>
+                                </div>
+                                <div class="radio radio-success mb-2">
+                                    <input type="radio" id="radio3" value="Lainnya" name="usaha_anggota" <?php if ($data['usaha_anggota'] == 'Lainnya') {
+                                                                                                                echo 'checked';
+                                                                                                            } ?>>
+                                    <label for="radio3">
+                                        Lainnya
+                                    </label>
+                                </div>
+                                <!-- <input type="text" id="usaha_anggota" name="usaha_anggota" class="form-control" placeholder="Usaha" value="<?= $data['usaha_anggota']; ?>"> -->
                             </div>
                         </div>
 

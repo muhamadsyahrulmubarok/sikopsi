@@ -65,7 +65,7 @@
                             </div>
                             <div class="col-md-3 form-group">
                                 <label for="">Tanggal Angsuran </label><br>
-                                <input type="date" name="tgl_angsuran" class="form-control">
+                                <input type="date" name="tgl_angsuran" class="form-control" value="<?= date('Y-m-d'); ?>">
                             </div>
                             <div class="col-md-2 form-group">
                                 <br>
