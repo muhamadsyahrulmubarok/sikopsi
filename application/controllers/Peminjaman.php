@@ -41,6 +41,10 @@ class Peminjaman extends CI_Controller
     public function simpan()
     {
         $id_anggota = $this->input->post('id_anggota');
+        if ($this->M_peminjaman->cekanggota($id_anggota) == true) {
+            $this->session->set_flashdata('message', '<div class="alert alert-danger alert-dismissible" role="alert"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>Data gagal di simpan karena anggota tersebut memiliki peminjaman yang belum lunas!!</div>');
+            redirect('peminjaman/tambah');
+        }
         $data = array(
             'no_peminjaman' => $this->input->post('no_peminjaman'),
             'tgl_drop' => $this->input->post('tgl_drop'),

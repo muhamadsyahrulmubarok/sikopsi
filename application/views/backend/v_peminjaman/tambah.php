@@ -15,6 +15,8 @@
     <link href="<?php echo base_url(); ?>assets/backend/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <link href="<?php echo base_url(); ?>assets/backend/css/icons.min.css" rel="stylesheet" type="text/css" />
     <link href="<?php echo base_url(); ?>assets/backend/css/app.min.css" rel="stylesheet" type="text/css" />
+    <!-- Sweet Alert-->
+    <link href="<?php echo base_url(); ?>assets/backend/libs/sweetalert2/sweetalert2.min.css" rel="stylesheet" type="text/css" />
 
     <link href="<?php echo base_url(); ?>assets/backend/libs/select2/select2.min.css" rel="stylesheet" type="text/css" />
 
@@ -39,6 +41,7 @@
                 <div class="card-box">
                     <h4 class="header-title">Form Tambah Peminjaman</h4>
 
+                    <?= $this->session->flashdata('message'); ?>
                     <form class="form-horizontal" action="<?php echo site_url('peminjaman/simpan'); ?>" method="POST">
                         <div class="form-group row">
                             <label class="col-sm-2 col-form-label" for="no_peminjaman">No Peminjaman</label>
@@ -50,7 +53,7 @@
                             <label class="col-sm-2 col-form-label" for="nama_anggota">Nama Peminjam</label>
                             <div class="col-sm-10">
                                 <select name="id_anggota" id="id_anggota" class="form-control" data-toggle="select2">
-                                    <option value="-">-- Pilih Anggota --</option>
+                                    <option value="-" selected disabled>-- Pilih Anggota --</option>
                                     <?php
                                     foreach ($anggota as $row) {
                                     ?>
@@ -158,6 +161,8 @@
     <script src="<?php echo base_url(); ?>assets/backend/libs/jquery-mask-plugin/jquery.mask.min.js"></script>
 
     <script src="<?php echo base_url(); ?>assets/backend/libs/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
+    <!-- Sweet Alerts js -->
+    <script src="<?php echo base_url(); ?>assets/backend/libs/sweetalert2/sweetalert2.min.js"></script>
 
     <script>
         $('[data-toggle="select2"]').select2();
@@ -176,7 +181,6 @@
             var resiko_kredit = document.getElementById("resiko_kredit").value = x * 2 / 100;
 
             document.getElementById("total_pinjaman").value = parseInt(x) + parseInt(jasa_peminjaman) + parseInt(jasa_pelayanan) + parseInt(resiko_kredit);
-
         }
     </script>
 

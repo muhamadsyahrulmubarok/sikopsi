@@ -93,7 +93,7 @@
                                     <td><?= $row['id_anggota']; ?></td>
                                     <td><?= $row['nama_anggota']; ?></td>
                                     <td><?= 'Rp. ' . number_format($row['simpanan'], 0, '.', '.'); ?></td>
-                                    <td><a href="#"><i class="mdi mdi-information-variant"></i></a> || <a href="javacript:" onclick="printExternal('<?= site_url('simpanan/cetak/') . $row['id_anggota'] ?>')" target="_blank"><i class="mdi mdi-printer"></i></a>
+                                    <td><a href="#"><i class="mdi mdi-information-variant"></i></a> || <a href="<?= site_url('simpanan/cetak/') . $row['id_anggota'] ?>" onclick="printExternal('<?= site_url('simpanan/cetak/') . $row['id_anggota'] ?>')" target="_blank"><i class="mdi mdi-printer"></i></a>
                                     </td>
                                 </tr>
                             <?php

@@ -65,6 +65,7 @@
                     <p></p>
                     <h4 class="header-title">Data Karyawan</h4>
 
+                    <?= $this->session->flashdata('message'); ?>
                     <div class="dropdown-divider"></div>
                     <table id="datatable" class="table table-bordered nowrap table-responsive-md">
                         <thead>

@@ -113,6 +113,18 @@ class M_peminjaman extends CI_Model
         $this->db->where('no_peminjaman', $id);
         return $this->db->update('peminjaman', $data);
     }
+
+    public function cekanggota($id)
+    {
+        $this->db->order_by('tgl_drop', 'desc');
+        $this->db->where('id_anggota', $id);
+        $q = $this->db->get('peminjaman')->row_array()['keterangan'];
+        if ($q == 'Proses') {
+            return true;
+        } else {
+            return false;
+        }
+    }
 }
 
 /* End of file M_peminjaman.php */
