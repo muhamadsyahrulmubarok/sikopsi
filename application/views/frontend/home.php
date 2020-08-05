@@ -75,7 +75,7 @@
                     <div class="container">
                         <div class="mod-menu">
                             <div class="row">
-                                <div class="col-sm-2"> <a href="index.html" title="" class="logo style-2 mar-4"> <img src="<?php echo site_url('assets/frontend/'); ?>images/logo/logo-dark.png" alt=""> </a> </div>
+                                <div class="col-sm-2 mb-2"> <a href="<?php echo site_url('home'); ?>" title="" class="logo style-2"> <img src="<?php echo site_url('assets/frontend/'); ?>images/logo/logo.jpeg" alt="Logo" width="80"> </a> </div>
                                 <div class="col-sm-10">
                                     <div class="main-nav">
                                         <ul class="nav navbar-nav top-nav">
@@ -89,15 +89,15 @@
                                                 <li> <a href="<?php echo site_url('halberita'); ?>">Berita</a>
 
                                                 </li>
-                                                <li> <a href="page-about4.html">Profile</a> <span class="arrow"></span>
+                                                <li> <a href="#">Profile</a> <span class="arrow"></span>
                                                     <ul class="dm-align-2">
-                                                        <li> <a href="#">Sejarah</a> </li>
-                                                        <li> <a href="#">Visi Misi</a> </li>
+                                                        <li> <a href="<?php echo site_url('profil/sejarah'); ?>">Sejarah</a> </li>
+                                                        <li> <a href="<?php echo site_url('profil/visi_misi'); ?>">Visi Misi</a> </li>
                                                     </ul>
                                                 </li>
                                                 <li class="mega-menu"> <a href="<?php echo site_url('angsuran'); ?>">Angsuran</a>
                                                 </li>
-                                                <li class="mega-menu five-col"> <a href="#">Kontak</a>
+                                                <li class="mega-menu five-col"> <a href="<?php echo site_url('kontak'); ?>">Kontak</a>
 
                                                 </li>
                                             </ul>
@@ -129,17 +129,14 @@
                             <!-- LAYERS -->
 
                             <!-- LAYER NR. 4 -->
-                            <div class="tp-caption roboto dark-grey white tp-resizeme" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['top','top','top','top']" data-voffset="['100','100','120','100']" data-fontsize="['18','16','14','14']" data-lineheight="['70','70','70','50']" data-transform_in="x:[-175%];y:0px;z:0;rX:0;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0.01;s:3000;e:Power3.easeOut;" data-transform_out="s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;" data-mask_in="x:[100%];y:0;s:inherit;e:inherit;" data-start="1000" data-splitin="lines" data-splitout="none" data-responsive_offset="on" data-elementdelay="0.05" style="z-index: 6; white-space: nowrap; font-size: 30px; line-height: 30px;">We are Creative & digital
-                                Studio</div>
+                            <div class="tp-caption roboto dark-grey white tp-resizeme" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['top','top','top','top']" data-voffset="['100','100','120','100']" data-fontsize="['18','16','14','14']" data-lineheight="['70','70','70','50']" data-transform_in="x:[-175%];y:0px;z:0;rX:0;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0.01;s:3000;e:Power3.easeOut;" data-transform_out="s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;" data-mask_in="x:[100%];y:0;s:inherit;e:inherit;" data-start="1000" data-splitin="lines" data-splitout="none" data-responsive_offset="on" data-elementdelay="0.05" style="z-index: 6; white-space: nowrap; font-size: 30px; line-height: 30px;">Muda, Beda, Mandiri</div>
 
                             <!-- LAYER NR. 1 -->
-                            <div class="tp-caption montserrat fweight-6 text-white tp-resizeme" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['top','top','top','top']" data-voffset="['145','145','155','135']" data-fontsize="['70','70','50','30']" data-lineheight="['100','100','100','50']" data-transform_in="x:[-175%];y:0px;z:0;rX:0;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0.01;s:3000;e:Power3.easeOut;" data-transform_out="s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;" data-mask_in="x:[100%];y:0;s:inherit;e:inherit;" data-start="1500" data-splitin="lines" data-splitout="none" data-responsive_offset="on" data-elementdelay="0.05" style="z-index: 6; white-space: nowrap; font-size: 30px; line-height: 30px;">Creative & Modern</div>
+                            <div class="tp-caption montserrat fweight-6 text-white tp-resizeme" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['top','top','top','top']" data-voffset="['145','145','155','135']" data-fontsize="['70','70','50','30']" data-lineheight="['100','100','100','50']" data-transform_in="x:[-175%];y:0px;z:0;rX:0;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0.01;s:3000;e:Power3.easeOut;" data-transform_out="s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;" data-mask_in="x:[100%];y:0;s:inherit;e:inherit;" data-start="1500" data-splitin="lines" data-splitout="none" data-responsive_offset="on" data-elementdelay="0.05" style="z-index: 6; white-space: nowrap; font-size: 30px; line-height: 30px;">KSP PRIMKOPPABRI</div>
 
                             <!-- LAYER NR. 2 -->
-                            <div class="tp-caption montserrat fweight-6 text-white tp-resizeme" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['top','top','top','top']" data-voffset="['210','220','200','180']" data-fontsize="['70','70','50','30']" data-lineheight="['100','100','100','50']" data-transform_in="x:[-175%];y:0px;z:0;rX:0;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0.01;s:3000;e:Power3.easeOut;" data-transform_out="s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;" data-mask_in="x:[100%];y:0;s:inherit;e:inherit;" data-start="2000" data-splitin="lines" data-splitout="none" data-responsive_offset="on" data-elementdelay="0.05" style="z-index: 6; white-space: nowrap; font-size: 30px; line-height: 30px;">Agency Studio</div>
+                            <div class="tp-caption montserrat fweight-6 text-white tp-resizeme" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['top','top','top','top']" data-voffset="['210','220','200','180']" data-fontsize="['70','70','50','30']" data-lineheight="['100','100','100','50']" data-transform_in="x:[-175%];y:0px;z:0;rX:0;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0.01;s:3000;e:Power3.easeOut;" data-transform_out="s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;" data-mask_in="x:[100%];y:0;s:inherit;e:inherit;" data-start="2000" data-splitin="lines" data-splitout="none" data-responsive_offset="on" data-elementdelay="0.05" style="z-index: 6; white-space: nowrap; font-size: 30px; line-height: 30px;">SLAWI</div>
 
-                            <!-- LAYER NR. 4 -->
-                            <div class="tp-caption sbut2 btn-round" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['top','top','top','top']" data-voffset="['380','380','400','280']" data-speed="800" data-start="2500" data-transform_in="y:bottom;s:1500;e:Power3.easeOut;" data-transform_out="opacity:0;s:3000;e:Power4.easeIn;s:3000;e:Power4.easeIn;" data-endspeed="300" data-captionhidden="off" style="z-index: 6"> <a href="#">Purchase Now</a> </div>
                         </li>
 
                         <!-- SLIDE  -->
@@ -150,17 +147,15 @@
                             <!-- LAYERS -->
 
                             <!-- LAYER NR. 1 -->
-                            <div class="tp-caption roboto dark-grey white tp-resizeme" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['top','top','top','top']" data-voffset="['100','100','120','100']" data-fontsize="['18','16','14','14']" data-lineheight="['70','70','70','50']" data-transform_in="x:[-175%];y:0px;z:0;rX:0;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0.01;s:3000;e:Power3.easeOut;" data-transform_out="s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;" data-mask_in="x:[100%];y:0;s:inherit;e:inherit;" data-start="1000" data-splitin="lines" data-splitout="none" data-responsive_offset="on" data-elementdelay="0.05" style="z-index: 6; white-space: nowrap; font-size: 30px; line-height: 30px;">We are Creative & digital
-                                Studio</div>
+                            <div class="tp-caption roboto dark-grey white tp-resizeme" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['top','top','top','top']" data-voffset="['100','100','120','100']" data-fontsize="['18','16','14','14']" data-lineheight="['70','70','70','50']" data-transform_in="x:[-175%];y:0px;z:0;rX:0;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0.01;s:3000;e:Power3.easeOut;" data-transform_out="s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;" data-mask_in="x:[100%];y:0;s:inherit;e:inherit;" data-start="1000" data-splitin="lines" data-splitout="none" data-responsive_offset="on" data-elementdelay="0.05" style="z-index: 6; white-space: nowrap; font-size: 30px; line-height: 30px;">Muda, Beda, Mandiri</div>
 
                             <!-- LAYER NR. 2 -->
-                            <div class="tp-caption montserrat fweight-6 text-white tp-resizeme" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['top','top','top','top']" data-voffset="['145','145','155','135']" data-fontsize="['70','70','50','30']" data-lineheight="['100','100','100','50']" data-transform_in="x:[-175%];y:0px;z:0;rX:0;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0.01;s:3000;e:Power3.easeOut;" data-transform_out="s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;" data-mask_in="x:[100%];y:0;s:inherit;e:inherit;" data-start="1500" data-splitin="lines" data-splitout="none" data-responsive_offset="on" data-elementdelay="0.05" style="z-index: 6; white-space: nowrap; font-size: 30px; line-height: 30px;">Creative & Modern</div>
+                            <div class="tp-caption montserrat fweight-6 text-white tp-resizeme" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['top','top','top','top']" data-voffset="['145','145','155','135']" data-fontsize="['70','70','50','30']" data-lineheight="['100','100','100','50']" data-transform_in="x:[-175%];y:0px;z:0;rX:0;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0.01;s:3000;e:Power3.easeOut;" data-transform_out="s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;" data-mask_in="x:[100%];y:0;s:inherit;e:inherit;" data-start="1500" data-splitin="lines" data-splitout="none" data-responsive_offset="on" data-elementdelay="0.05" style="z-index: 6; white-space: nowrap; font-size: 30px; line-height: 30px;">KSP PRIMKOPPABRI</div>
 
                             <!-- LAYER NR. 3 -->
-                            <div class="tp-caption montserrat fweight-6 text-white tp-resizeme" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['top','top','top','top']" data-voffset="['210','220','200','180']" data-fontsize="['70','70','50','30']" data-lineheight="['100','100','100','50']" data-transform_in="x:[-175%];y:0px;z:0;rX:0;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0.01;s:3000;e:Power3.easeOut;" data-transform_out="s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;" data-mask_in="x:[100%];y:0;s:inherit;e:inherit;" data-start="2000" data-splitin="lines" data-splitout="none" data-responsive_offset="on" data-elementdelay="0.05" style="z-index: 6; white-space: nowrap; font-size: 30px; line-height: 30px;">Agency Studio</div>
+                            <div class="tp-caption montserrat fweight-6 text-white tp-resizeme" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['top','top','top','top']" data-voffset="['210','220','200','180']" data-fontsize="['70','70','50','30']" data-lineheight="['100','100','100','50']" data-transform_in="x:[-175%];y:0px;z:0;rX:0;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0.01;s:3000;e:Power3.easeOut;" data-transform_out="s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;" data-mask_in="x:[100%];y:0;s:inherit;e:inherit;" data-start="2000" data-splitin="lines" data-splitout="none" data-responsive_offset="on" data-elementdelay="0.05" style="z-index: 6; white-space: nowrap; font-size: 30px; line-height: 30px;">SLAWI</div>
 
-                            <!-- LAYER NR. 4 -->
-                            <div class="tp-caption sbut2 btn-round" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['top','top','top','top']" data-voffset="['380','380','400','280']" data-speed="800" data-start="2500" data-transform_in="y:bottom;s:1500;e:Power3.easeOut;" data-transform_out="opacity:0;s:3000;e:Power4.easeIn;s:3000;e:Power4.easeIn;" data-endspeed="300" data-captionhidden="off" style="z-index: 6"> <a href="#">Purchase Now</a> </div>
+
                         </li>
 
                         <!-- SLIDE  -->
@@ -172,17 +167,15 @@
                             <!-- LAYERS -->
 
                             <!-- LAYER NR. 1 -->
-                            <div class="tp-caption roboto dark-grey white tp-resizeme" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['top','top','top','top']" data-voffset="['100','100','120','100']" data-fontsize="['18','16','14','14']" data-lineheight="['70','70','70','50']" data-transform_in="x:[-175%];y:0px;z:0;rX:0;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0.01;s:3000;e:Power3.easeOut;" data-transform_out="s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;" data-mask_in="x:[100%];y:0;s:inherit;e:inherit;" data-start="1000" data-splitin="lines" data-splitout="none" data-responsive_offset="on" data-elementdelay="0.05" style="z-index: 6; white-space: nowrap; font-size: 30px; line-height: 30px;">We are Creative & digital
-                                Studio</div>
+                            <div class="tp-caption roboto dark-grey white tp-resizeme" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['top','top','top','top']" data-voffset="['100','100','120','100']" data-fontsize="['18','16','14','14']" data-lineheight="['70','70','70','50']" data-transform_in="x:[-175%];y:0px;z:0;rX:0;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0.01;s:3000;e:Power3.easeOut;" data-transform_out="s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;" data-mask_in="x:[100%];y:0;s:inherit;e:inherit;" data-start="1000" data-splitin="lines" data-splitout="none" data-responsive_offset="on" data-elementdelay="0.05" style="z-index: 6; white-space: nowrap; font-size: 30px; line-height: 30px;">Muda, Beda, Mandiri</div>
 
                             <!-- LAYER NR. 2 -->
-                            <div class="tp-caption montserrat fweight-6 text-white tp-resizeme" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['top','top','top','top']" data-voffset="['145','145','155','135']" data-fontsize="['70','70','50','30']" data-lineheight="['100','100','100','50']" data-transform_in="x:[-175%];y:0px;z:0;rX:0;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0.01;s:3000;e:Power3.easeOut;" data-transform_out="s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;" data-mask_in="x:[100%];y:0;s:inherit;e:inherit;" data-start="1500" data-splitin="lines" data-splitout="none" data-responsive_offset="on" data-elementdelay="0.05" style="z-index: 6; white-space: nowrap; font-size: 30px; line-height: 30px;">Creative & Modern</div>
+                            <div class="tp-caption montserrat fweight-6 text-white tp-resizeme" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['top','top','top','top']" data-voffset="['145','145','155','135']" data-fontsize="['70','70','50','30']" data-lineheight="['100','100','100','50']" data-transform_in="x:[-175%];y:0px;z:0;rX:0;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0.01;s:3000;e:Power3.easeOut;" data-transform_out="s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;" data-mask_in="x:[100%];y:0;s:inherit;e:inherit;" data-start="1500" data-splitin="lines" data-splitout="none" data-responsive_offset="on" data-elementdelay="0.05" style="z-index: 6; white-space: nowrap; font-size: 30px; line-height: 30px;">KSP PRIMKOPPABRI</div>
 
                             <!-- LAYER NR. 3 -->
-                            <div class="tp-caption montserrat fweight-6 text-white tp-resizeme" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['top','top','top','top']" data-voffset="['210','220','200','180']" data-fontsize="['70','70','50','30']" data-lineheight="['100','100','100','50']" data-transform_in="x:[-175%];y:0px;z:0;rX:0;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0.01;s:3000;e:Power3.easeOut;" data-transform_out="s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;" data-mask_in="x:[100%];y:0;s:inherit;e:inherit;" data-start="2000" data-splitin="lines" data-splitout="none" data-responsive_offset="on" data-elementdelay="0.05" style="z-index: 6; white-space: nowrap; font-size: 30px; line-height: 30px;">Agency Studio</div>
+                            <div class="tp-caption montserrat fweight-6 text-white tp-resizeme" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['top','top','top','top']" data-voffset="['210','220','200','180']" data-fontsize="['70','70','50','30']" data-lineheight="['100','100','100','50']" data-transform_in="x:[-175%];y:0px;z:0;rX:0;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0.01;s:3000;e:Power3.easeOut;" data-transform_out="s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;" data-mask_in="x:[100%];y:0;s:inherit;e:inherit;" data-start="2000" data-splitin="lines" data-splitout="none" data-responsive_offset="on" data-elementdelay="0.05" style="z-index: 6; white-space: nowrap; font-size: 30px; line-height: 30px;">SLAWI</div>
 
-                            <!-- LAYER NR. 4 -->
-                            <div class="tp-caption sbut2 btn-round" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['top','top','top','top']" data-voffset="['380','380','400','280']" data-speed="800" data-start="2500" data-transform_in="y:bottom;s:1500;e:Power3.easeOut;" data-transform_out="opacity:0;s:3000;e:Power4.easeIn;s:3000;e:Power4.easeIn;" data-endspeed="300" data-captionhidden="off" style="z-index: 6"> <a href="#">Purchase Now</a> </div>
+
                         </li>
 
                     </ul>
@@ -294,7 +287,9 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-3 col-xs-12 clearfix margin-bottom">
-                            <div class="footer-logo"><img src="<?php echo site_url('assets/frontend/'); ?>images/logo/logo.png" alt="" /></div>
+                            <div class="footer-logo">
+                                <h2 class="text-white"><strong>KSP PRIMKOPPABRI SLAWI</strong></h2>
+                            </div>
                             <div class="clearfix"></div>
                             <address class="text-light">
                                 <strong class="text-white">Alamat:</strong> <br>

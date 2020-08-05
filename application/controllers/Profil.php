@@ -11,6 +11,15 @@ class Profil extends CI_Controller
 
     public function index()
     {
-        $this->load->view('frontend/profil');
+        redirect('home');
+    }
+
+    public function sejarah()
+    {
+        $this->load->view('frontend/sejarah');
+    }
+    public function visi_misi()
+    {
+        $this->load->view('frontend/visi_misi');
     }
 }

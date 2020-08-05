@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Cek Angsuran</title>
+    <title>Profil - Visi dan Misi</title>
     <meta name="keywords" content="PRIMKOPPABRI" />
     <meta name="description" content="PRIMKOPPABRI">
     <meta name="author" content="PRIMKOPPABRI">
@@ -25,13 +25,14 @@
     <link rel="stylesheet" href="<?php echo site_url('assets/frontend/'); ?>js/megamenu/stylesheets/screen.css">
     <link rel="stylesheet" href="<?php echo site_url('assets/frontend/'); ?>css/theme-default.css" type="text/css">
     <link rel="stylesheet" href="<?php echo site_url('assets/frontend/'); ?>js/loaders/stylesheets/screen.css">
-    <link rel="stylesheet" href="<?php echo site_url('assets/frontend/'); ?>css/shortcodes.css" type="text/css">
+    <link rel="stylesheet" href="<?php echo site_url('assets/frontend/'); ?>css/corporate.css" type="text/css">
     <link rel="stylesheet" href="<?php echo site_url('assets/frontend/'); ?>fonts/font-awesome/css/font-awesome.min.css" type="text/css">
     <link rel="stylesheet" type="text/css" href="<?php echo site_url('assets/frontend/'); ?>fonts/Simple-Line-Icons-Webfont/simple-line-icons.css" media="screen" />
     <link rel="stylesheet" href="<?php echo site_url('assets/frontend/'); ?>fonts/et-line-font/et-line-font.css">
-
+    <link href="<?php echo site_url('assets/frontend/'); ?>js/owl-carousel/owl.carousel.css" rel="stylesheet">
+    <link href="<?php echo site_url('assets/frontend/'); ?>js/owl-carousel/owl.theme.css" rel="stylesheet">
+    <link rel="stylesheet" href="<?php echo site_url('assets/frontend/'); ?>js/parallax/main.css">
     <!-- Template's stylesheets END -->
-
 
     <!--[if lt IE 9]>
 <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -42,6 +43,7 @@
     <link rel="stylesheet" type="text/css" href="<?php echo site_url('assets/frontend/'); ?>js/style-customizer/css/style-customizer.css">
     <link rel="stylesheet/less" type="text/css" href="<?php echo site_url('assets/frontend/'); ?>less/skin.less">
     <!-- Style Customizer's stylesheets END -->
+
 
     <!-- Skin stylesheet -->
 
@@ -110,13 +112,13 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-md-6">
-                                <h4 class="uppercase text-light">Cek Angsuran</h4>
+                                <h4 class="uppercase text-light">Visi dan Misi</h4>
                             </div>
                             <div class="col-md-6">
                                 <ol class="breadcrumb">
                                     <li><a href="<?php echo site_url('home'); ?>">Home</a></li>
-                                    <li class="current"><a href="#">Angsuran</a></li>
-                                    <!-- <li class="current"><a href="#">Blog 3 Column</a></li> -->
+                                    <li>Profil</li>
+                                    <li class="current"><a href="<?php echo site_url('profil/sejarah'); ?>">Visi dan Misi</a></li>
                                 </ol>
                             </div>
                         </div>
@@ -125,83 +127,42 @@
             </section>
             <div class="clearfix"></div>
             <!--end section-->
-            <div class="form-body bg-white">
-                <div class="">
+            <section class="section-light sec-padding">
+                <div class="container">
                     <div class="row">
-                        <div class="col-md-12 col-sm-12">
-                            <div class="col-md-12 text-center">
-                                <h4 class="uppercase">Form Cek Angsuran</h4>
+                        <div class="cp-feature-box-2">
+                            <div class="col-md-6 col-sm-10 nopadding">
+                                <div class="img-box"> <img src="<?php echo base_url('assets/frontend/images/profil.jpeg'); ?>" alt="" class="img-responsive" /> </div>
                             </div>
-                            <div class="clearfix"></div>
-                            <div class="form-body bg-light">
-                                <form method="get">
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <label class="lable-text" for="id_anggota"> ID Anggota</label>
-                                            <input id="id_anggota" class="input-1" type="text" placeholder="Masukan ID Anggota" name="id_anggota" value="<?= $this->input->get('id_anggota'); ?>">
+                            <div class="col-md-6 col-sm-12 col-xs-12 nopadding">
+                                <div class="text-box">
+                                    <div class="col-sm-12 nopadding">
+                                        <div class="sec-title-container less-padding-4 text-left">
+                                            <h2 class="font-weight-6 less-mar-1 line-height-5">VISI DAN MISI</h2>
+                                            <div class="ce-title-line align-left"></div>
                                         </div>
                                     </div>
-                                    <div class="row">
+                                    <!--end title-->
 
-                                        <div class="col-md-12 col-12">
-                                            <label class="lable-text" for="no"> Nomor Peminjaman</label>
-                                            <input id="no" class="input-1" type="text" placeholder="Masukan Nomor Peminjaman" name="no" value="<?= $this->input->get('no'); ?>">
-                                        </div>
+                                    <p>
+                                        VISI :<br>
+                                        "Menjadi Mitra yang handal bagi anggota dalam mewujudkan ekonomi yang lebih baik."
+                                        <br>
+                                        <br>
+                                        MISI : <br>
+                                        1. Menyelenggarakan pelayanan prima kepada Anggota, sesuai dengan jatidiri koperasi. <br>
+                                        2. Menjalankan kegiatan usaha simpan pinjam dengan efektif, efisien dan transparan. <br>
+                                        3. Menjalin kerjasama usaha dengan berbagai pihak untuk meningkatkan manfaat bagianggota. <br>
+                                    </p>
+                                    <!--end column-->
 
-                                    </div>
-                                    <!-- end row -->
-
-                                    <div class="row">
-                                        <div class="col-md-12 text-center">
-                                            <button class="btn btn-primary btn-fullwidth uppercase" type="submit"><i class="fa fa-paper-plane"></i> Cek Data</button>
-                                        </div>
-                                    </div>
-                                    </br>
-                                </form>
-                                <!-- end row -->
-                                <?php
-                                if ($this->input->get('no')) {
-                                ?>
-                                    <div class="pricing-table-2">
-
-                                        <div class="inner-box table-responsive">
-                                            <div class="text-center">
-                                                <h4>Informasi Pinjaman</h4>
-                                            </div>
-                                            No Anggota : <?= $data['id_anggota']; ?><br>
-                                            Nama : <?= $data['nama_anggota']; ?><br>
-                                            Jumlah Pinjaman : <?= $data['total_pinjaman']; ?><br>
-                                            Keterangan : <?= $data['keterangan']; ?><br>
-                                            <table class="table table-bordered text-center">
-                                                <tr>
-                                                    <th colspan="2">Daftar Angsuran</th>
-                                                </tr>
-                                                <tr>
-                                                    <th>Angsuran Ke-</th>
-                                                    <th>Nominal Angsuran</th>
-                                                </tr>
-                                                <?php
-                                                foreach ($angsuran as $row) {
-                                                ?>
-                                                    <tr>
-                                                        <td><?= $row['angsuran_ke']; ?></td>
-                                                        <td>Rp. <?= $row['nominal_angsuran']; ?></td>
-                                                    </tr>
-                                                <?php } ?>
-                                            </table>
-                                        </div>
-                                    </div>
-                                <?php
-                                }
-                                ?>
-
+                                </div>
                             </div>
-                            <!--end form body-->
+                            <!--end item-->
                         </div>
-                        <!--end item-->
                     </div>
                 </div>
-            </div>
+            </section>
             <div class="clearfix"></div>
             <!-- end section -->
 
@@ -252,29 +213,21 @@
         </div>
     </div>
 </body>
-
 <!-- Scripts -->
 <script src="<?php echo site_url('assets/frontend/'); ?>js/jquery/jquery.js"></script>
 <script src="<?php echo site_url('assets/frontend/'); ?>js/bootstrap/bootstrap.min.js"></script>
-
+<script src="<?php echo site_url('assets/frontend/'); ?>js/style-customizer/js/spectrum.js"></script>
 <script src="<?php echo site_url('assets/frontend/'); ?>js/less/less.min.js" data-env="development"></script>
-
+<script src="<?php echo site_url('assets/frontend/'); ?>js/style-customizer/js/style-customizer.js"></script>
 <!-- Scripts END -->
 
 <!-- Template scripts -->
 <script src="<?php echo site_url('assets/frontend/'); ?>js/megamenu/js/main.js"></script>
-<script src="<?php echo site_url('assets/frontend/'); ?>js/jFlickrFeed/jflickrfeed.min.js"></script>
-<script>
-    $('#basicuse').jflickrfeed({
-        limit: 6,
-        qstrings: {
-            id: '133294431@N08'
-        },
-        itemTemplate: '<li>' +
-            '<a href="{{image_b}}"><img src="{{image_s}}" alt="{{title}}" /></a>' +
-            '</li>'
-    });
-</script>
+<script src="<?php echo site_url('assets/frontend/'); ?>js/owl-carousel/owl.carousel.js"></script>
+<script src="<?php echo site_url('assets/frontend/'); ?>js/owl-carousel/custom.js"></script>
+<script src="<?php echo site_url('assets/frontend/'); ?>js/progress-circle/raphael-min.js"></script>
+<script src="<?php echo site_url('assets/frontend/'); ?>js/progress-circle/custom.js"></script>
+<script src="<?php echo site_url('assets/frontend/'); ?>js/progress-circle/jQuery.circleProgressBar.js"></script>
 
 <script>
     $(window).load(function() {
@@ -283,6 +236,13 @@
             $('.loader-live').fadeOut();
         }, 1000);
     })
+</script>
+<script src="<?php echo site_url('assets/frontend/'); ?>js/parallax/parallax-background.min.js"></script>
+
+<script>
+    (function($) {
+        $('.parallax').parallaxBackground();
+    })(jQuery);
 </script>
 <script src="<?php echo site_url('assets/frontend/'); ?>js/functions/functions.js"></script>
 

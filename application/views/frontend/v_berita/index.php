@@ -69,7 +69,7 @@
           <div class="container">
             <div class="mod-menu">
               <div class="row">
-                <div class="col-sm-2"> <a href="index.html" title="" class="logo style-2 mar-4"> <img src="<?php echo site_url('assets/frontend/'); ?>images/logo/logo-dark.png" alt=""> </a> </div>
+                <div class="col-sm-2"> <a href="<?php echo site_url('home'); ?>" title="" class="logo style-2"> <img src="<?php echo site_url('assets/frontend/'); ?>images/logo/logo.jpeg" alt="Logo" width="80"> </a> </div>
                 <div class="col-sm-10">
                   <div class="main-nav">
                     <ul class="nav navbar-nav top-nav">
@@ -83,15 +83,15 @@
                         <li> <a href="<?php echo site_url('halberita'); ?>">Berita</a>
 
                         </li>
-                        <li> <a href="page-about4.html">Profile</a> <span class="arrow"></span>
+                        <li> <a href="#">Profile</a> <span class="arrow"></span>
                           <ul class="dm-align-2">
-                            <li> <a href="#">Sejarah</a> </li>
-                            <li> <a href="#">Visi Misi</a> </li>
+                            <li> <a href="<?php echo site_url('profil/sejarah'); ?>">Sejarah</a> </li>
+                            <li> <a href="<?php echo site_url('profil/visi_misi'); ?>">Visi Misi</a> </li>
                           </ul>
                         </li>
                         <li class="mega-menu"> <a href="<?php echo site_url('angsuran'); ?>">Angsuran</a>
                         </li>
-                        <li class="mega-menu five-col"> <a href="#">Kontak</a>
+                        <li class="mega-menu five-col"> <a href="<?php echo site_url('kontak'); ?>">Kontak</a>
 
                         </li>
                       </ul>
@@ -168,58 +168,21 @@
       <div class="clearfix"></div>
       <!-- end section -->
 
-      <div class="section-dark sec-padding">
+      <div class="sec-padding section-dark">
         <div class="container">
           <div class="row">
-            <div class="col-md-3 col-sm-12 colmargin clearfix margin-bottom">
-              <div class="fo-map">
-                <div class="footer-logo"><img src="images/logo/logo.png" alt="" /></div>
-                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse et justo. Praesent mattis commodo </p>
-                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse et justo. Praesent mattis commodo </p>
+            <div class="col-md-3 col-xs-12 clearfix margin-bottom">
+              <div class="footer-logo">
+                <h2 class="text-white"><strong>KSP PRIMKOPPABRI SLAWI</strong></h2>
               </div>
-            </div>
-            <!--end item-->
-
-            <div class="col-md-3 col-xs-12 clearfix margin-bottom">
-              <h4 class="text-white less-mar3 font-weight-5">About Us</h4>
               <div class="clearfix"></div>
-              <br />
-              <ul class="footer-quick-links-4 white">
-                <li><a href="#"><i class="fa fa-angle-right"></i> Placerat bibendum</a></li>
-                <li><a href="#"><i class="fa fa-angle-right"></i> Ullamcorper odio nec turpis</a></li>
-                <li><a href="#"><i class="fa fa-angle-right"></i> Aliquam porttitor vestibulum ipsum</a></li>
-                <li><a href="#"><i class="fa fa-angle-right"></i> Lobortis enim nec nisi</a></li>
-                <li><a href="#"><i class="fa fa-angle-right"></i> Placerat bibendum</a></li>
-              </ul>
-            </div>
-            <!--end item-->
-
-            <div class="col-md-3 col-xs-12 clearfix margin-bottom">
-              <h4 class="text-white less-mar3 font-weight-5">Quick Links</h4>
-              <div class="clearfix"></div>
-              <br />
-              <ul class="footer-quick-links-4 white">
-                <li><a href="#"><i class="fa fa-angle-right"></i> Placerat bibendum</a></li>
-                <li><a href="#"><i class="fa fa-angle-right"></i> Ullamcorper odio nec turpis</a></li>
-                <li><a href="#"><i class="fa fa-angle-right"></i> Aliquam porttitor vestibulum ipsum</a></li>
-                <li><a href="#"><i class="fa fa-angle-right"></i> Lobortis enim nec nisi</a></li>
-                <li><a href="#"><i class="fa fa-angle-right"></i> Placerat bibendum</a></li>
-              </ul>
-            </div>
-            <!--end item-->
-
-            <div class="col-md-3 col-xs-12 clearfix margin-bottom">
-              <h4 class="text-white less-mar3 font-weight-5">Contact Us</h4>
-              <div class="clearfix"></div>
-              <br />
               <address class="text-light">
-                <strong class="text-white">Address:</strong> <br>
-                No.28 - 63739 street lorem ipsum, <br>
-                ipsum City, Country
+                <strong class="text-white">Alamat:</strong> <br>
+                Jl. Merak No. 13 RT 04 RW 03 Kel. Slawi Kulon - Kec. Slawi <br>
+                Tegal, Jawa Tengah
               </address>
-              <span class="text-light"><strong>Phone:</strong> + 1 (234) 567 8901</span><br>
-              <span class="text-light"><strong>Email:</strong> email@example.com </span><br>
-              <span class="text-light"><strong>Fax:</strong> + 1 (234) 567 8901</span>
+              <span class="text-light"><strong>No. Telp Aduan:</strong> +62 823-2639-5985</span><br>
+              <span class="text-light"><strong>Email:</strong> admin@primkoppabri.com </span><br>
               <ul class="footer-social-icons white left-align icons-plain text-center">
                 <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
                 <li><a href="#"><i class="fa fa-facebook"></i></a></li>
@@ -229,6 +192,8 @@
               </ul>
             </div>
             <!--end item-->
+
+
           </div>
         </div>
       </div>
@@ -238,7 +203,7 @@
       <section class="sec-padding-6 section-medium-dark">
         <div class="container">
           <div class="row">
-            <div class="fo-copyright-holder text-center"> Copyright © 2019 Codelayers | All rights reserved. </div>
+            <div class="fo-copyright-holder text-center"> Copyright © 2020 PRIMKOPPABRI | All rights reserved. </div>
           </div>
         </div>
       </section>

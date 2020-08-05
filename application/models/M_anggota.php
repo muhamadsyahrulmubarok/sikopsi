@@ -52,6 +52,11 @@ class M_anggota extends CI_Model
         $this->db->delete('anggota');
         return $this->db->affected_rows();
     }
+
+    public function GetCount()
+    {
+        return $this->db->get('anggota')->num_rows();
+    }
 }
 
 /* End of file M_anggota.php */

@@ -31,11 +31,11 @@
             <div class="col-xl-4">
                 <div class="card-box widget-chart-one gradient-success bx-shadow-lg">
                     <div class="float-left" dir="ltr">
-                        <input data-plugin="knob" data-width="80" data-height="80" data-linecap=round data-fgColor="#ffffff" data-bgcolor="rgba(255,255,255,0.2)" value="49" data-skin="tron" data-angleOffset="180" data-readOnly=true data-thickness=".1" />
+                        <input data-plugin="knob" data-width="80" data-height="80" data-linecap=round data-fgColor="#ffffff" data-bgcolor="rgba(255,255,255,0.2)" value="<?= $anggota; ?>" data-skin="tron" data-angleOffset="<?= $anggota; ?>" data-readOnly=true data-thickness=".1" />
                     </div>
                     <div class="widget-chart-one-content text-right">
-                        <p class="text-white mb-0 mt-2">Statistics</p>
-                        <h3 class="text-white">$714</h3>
+                        <p class="text-white mb-0 mt-2">Total Anggota</p>
+                        <h3 class="text-white"><?= $anggota; ?></h3>
                     </div>
                 </div> <!-- end card-box-->
 
@@ -43,11 +43,11 @@
             <div class="col-xl-4">
                 <div class="card-box widget-chart-one gradient-primary bx-shadow-lg">
                     <div class="float-left" dir="ltr">
-                        <input data-plugin="knob" data-width="80" data-height="80" data-linecap=round data-fgColor="#ffffff" data-bgcolor="rgba(255,255,255,0.2)" value="49" data-skin="tron" data-angleOffset="180" data-readOnly=true data-thickness=".1" />
+                        <input data-plugin="knob" data-width="80" data-height="80" data-linecap=round data-fgColor="#ffffff" data-bgcolor="rgba(255,255,255,0.2)" value="<?= number_format($peminjaman['total'], 0, ',', '.'); ?>" data-skin="tron" data-angleOffset="180" data-readOnly=true data-thickness=".1" />
                     </div>
                     <div class="widget-chart-one-content text-right">
-                        <p class="text-white mb-0 mt-2">Statistics</p>
-                        <h3 class="text-white">$714</h3>
+                        <p class="text-white mb-0 mt-2">Total Peminjaman</p>
+                        <h3 class="text-white">Rp. <?= number_format($peminjaman['total'], 0, ',', '.'); ?></h3>
                     </div>
                 </div> <!-- end card-box-->
 
@@ -55,11 +55,11 @@
             <div class="col-xl-4">
                 <div class="card-box widget-chart-one gradient-warning bx-shadow-lg">
                     <div class="float-left" dir="ltr">
-                        <input data-plugin="knob" data-width="80" data-height="80" data-linecap=round data-fgColor="#ffffff" data-bgcolor="rgba(255,255,255,0.2)" value="49" data-skin="tron" data-angleOffset="180" data-readOnly=true data-thickness=".1" />
+                        <input data-plugin="knob" data-width="80" data-height="80" data-linecap=round data-fgColor="#ffffff" data-bgcolor="rgba(255,255,255,0.2)" value="<?= $karyawan; ?>" data-skin="tron" data-angleOffset="180" data-readOnly=true data-thickness=".1" />
                     </div>
                     <div class="widget-chart-one-content text-right">
-                        <p class="text-white mb-0 mt-2">Statistics</p>
-                        <h3 class="text-white">$714</h3>
+                        <p class="text-white mb-0 mt-2">Total Karyawan</p>
+                        <h3 class="text-white"><?= $karyawan; ?></h3>
                     </div>
                 </div> <!-- end card-box-->
 

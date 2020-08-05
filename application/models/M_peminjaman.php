@@ -125,6 +125,12 @@ class M_peminjaman extends CI_Model
             return false;
         }
     }
+
+    public function GetCount()
+    {
+        $this->db->select('SUM(pinjaman_pokok) as total');
+        return $this->db->get('peminjaman')->row_array();
+    }
 }
 
 /* End of file M_peminjaman.php */

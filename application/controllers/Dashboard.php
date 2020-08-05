@@ -7,7 +7,7 @@ class Dashboard extends CI_Controller
     public function __construct()
     {
         parent::__construct();
-        $this->load->model('M_admin');
+        $this->load->model(array('M_admin', 'M_anggota', 'M_karyawan', 'M_peminjaman'));
         if (!$this->session->userdata('username_admin')) {
             redirect('auth', 'refresh');
         }
@@ -17,7 +17,10 @@ class Dashboard extends CI_Controller
     {
         $data = array(
             'menu' => "Dashboard",
-            'admin' => $this->M_admin->GetLoginAdmin()->row_array()
+            'admin' => $this->M_admin->GetLoginAdmin()->row_array(),
+            'anggota' => $this->M_anggota->GetCount(),
+            'karyawan' => $this->M_karyawan->GetCount(),
+            'peminjaman' => $this->M_peminjaman->GetCount()
         );
         $this->load->view('backend/v_dashboard', $data);
     }

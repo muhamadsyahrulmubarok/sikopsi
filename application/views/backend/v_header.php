@@ -50,10 +50,10 @@
         <li class="float-left">
             <a href="index.html" class="logo">
                 <span class="logo-lg">
-                    <img src="<?php echo base_url(); ?>assets/backend/images/logo-light.png" alt="" height="22">
+                    <img src="<?php echo base_url(); ?>assets/backend/images/LOGO1.png" alt="" height="60">
                 </span>
                 <span class="logo-sm">
-                    <img src="<?php echo base_url(); ?>assets/backend/images/logo-sm.png" alt="" height="24">
+                    <img src="<?php echo base_url(); ?>assets/backend/images/LOGO1.png" alt="" height="50">
                 </span>
             </a>
         </li>

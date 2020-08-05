@@ -44,6 +44,11 @@ class M_karyawan extends CI_Model
     {
         return $this->db->get('resort');
     }
+
+    public function GetCount()
+    {
+        return $this->db->get('karyawan')->num_rows();
+    }
 }
 
 /* End of file M_karyawan.php */
