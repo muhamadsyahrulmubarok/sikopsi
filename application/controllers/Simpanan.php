@@ -13,13 +13,16 @@ class Simpanan extends CI_Controller
 
     public function index()
     {
+        if (!$this->session->userdata('username_admin')) {
+            redirect('auth', 'refresh');
+        }
         $hari = $this->input->get('hari');
         $resort = $this->input->get('resort');
 
         $data = array(
             'menu' => "Simpanan",
             'admin' => $this->M_admin->GetLoginAdmin()->row_array(),
-            'data' => $this->M_Simpanan->GetByName($hari, $resort)->result_array()
+            'data' => $this->M_simpanan->GetByName($hari, $resort)->result_array()
         );
 
         $this->load->view('backend/v_Simpanan/index', $data);
@@ -27,11 +30,25 @@ class Simpanan extends CI_Controller
 
     public function cetak($id)
     {
+        if (!$this->session->userdata('username_admin')) {
+            redirect('auth', 'refresh');
+        }
         $data = array(
             'menu' => 'Cetak Simpanan',
             'anggota' => $this->M_Simpanan->GetAnggota($id)->row_array(),
             'data' => $this->M_Simpanan->Cetak($id)->result_array()
         );
         $this->load->view('backend/v_Simpanan/cetak', $data);
+    }
+
+    public function cek()
+    {
+        $id = $this->input->get('id');
+
+        $data = array(
+            'simpanan' => $this->M_Simpanan->GetAnggota($id)->row_array(),
+            'data' => $this->M_Simpanan->Cetak($id)->result_array()
+        );
+        $this->load->view('frontend/v_simpanan/index', $data);
     }
 }
