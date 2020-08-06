@@ -8,7 +8,7 @@ class Simpanan extends CI_Controller
     {
         parent::__construct();
 
-        $this->load->model(array('M_admin', 'M_Simpanan'));
+        $this->load->model(array('M_admin', 'M_simpanan'));
     }
 
     public function index()
@@ -25,7 +25,7 @@ class Simpanan extends CI_Controller
             'data' => $this->M_simpanan->GetByName($hari, $resort)->result_array()
         );
 
-        $this->load->view('backend/v_Simpanan/index', $data);
+        $this->load->view('backend/v_simpanan/index', $data);
     }
 
     public function cetak($id)
@@ -35,10 +35,10 @@ class Simpanan extends CI_Controller
         }
         $data = array(
             'menu' => 'Cetak Simpanan',
-            'anggota' => $this->M_Simpanan->GetAnggota($id)->row_array(),
-            'data' => $this->M_Simpanan->Cetak($id)->result_array()
+            'anggota' => $this->M_simpanan->GetAnggota($id)->row_array(),
+            'data' => $this->M_simpanan->Cetak($id)->result_array()
         );
-        $this->load->view('backend/v_Simpanan/cetak', $data);
+        $this->load->view('backend/v_simpanan/cetak', $data);
     }
 
     public function cek()
@@ -46,8 +46,8 @@ class Simpanan extends CI_Controller
         $id = $this->input->get('id');
 
         $data = array(
-            'simpanan' => $this->M_Simpanan->GetAnggota($id)->row_array(),
-            'data' => $this->M_Simpanan->Cetak($id)->result_array()
+            'simpanan' => $this->M_simpanan->GetAnggota($id)->row_array(),
+            'data' => $this->M_simpanan->Cetak($id)->result_array()
         );
         $this->load->view('frontend/v_simpanan/index', $data);
     }
