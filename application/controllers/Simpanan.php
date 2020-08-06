@@ -14,7 +14,7 @@ class Simpanan extends CI_Controller
     public function index()
     {
         if (!$this->session->userdata('username_admin')) {
-            redirect('auth', 'refresh');
+            redirect('home', 'refresh');
         }
         $hari = $this->input->get('hari');
         $resort = $this->input->get('resort');
@@ -31,7 +31,7 @@ class Simpanan extends CI_Controller
     public function cetak($id)
     {
         if (!$this->session->userdata('username_admin')) {
-            redirect('auth', 'refresh');
+            redirect('home', 'refresh');
         }
         $data = array(
             'menu' => 'Cetak Simpanan',

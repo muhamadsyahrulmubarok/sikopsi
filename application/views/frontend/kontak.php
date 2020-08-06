@@ -88,6 +88,7 @@
                                                 </li>
                                                 <li class="mega-menu"> <a href="<?php echo site_url('angsuran'); ?>">Angsuran</a>
                                                 </li>
+                                                <li class="mega-menu"> <a href="<?php echo site_url('simpanan/cek'); ?>">Simpanan</a>
                                                 <li class="mega-menu five-col"> <a href="<?php echo site_url('kontak'); ?>">Kontak</a>
 
                                                 </li>
