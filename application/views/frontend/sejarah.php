@@ -78,21 +78,34 @@
                                         </ul>
                                         <div id="menu" class="collapse">
                                             <ul class="nav navbar-nav">
-                                                <li class="right active"> <a href="<?php echo site_url('home'); ?>">Home</a>
+                                                <li class="right <?php if ($this->uri->segment('1') == 'home') {
+                                                                        echo 'active';
+                                                                    } ?>"> <a href="<?php echo site_url('home'); ?>">Home</a>
                                                 </li>
-                                                <li> <a href="<?php echo site_url('halberita'); ?>">Berita</a>
+                                                <li class="right <?php if ($this->uri->segment('1') == 'halberita') {
+                                                                        echo 'active';
+                                                                    } ?>"> <a href="<?php echo site_url('halberita'); ?>">Berita</a>
 
                                                 </li>
-                                                <li> <a href="#">Profile</a> <span class="arrow"></span>
+                                                <li class="right <?php if ($this->uri->segment('1') == 'profil') {
+                                                                        echo 'active';
+                                                                    } ?>"> <a href="#">Profile</a> <span class="arrow"></span>
                                                     <ul class="dm-align-2">
                                                         <li> <a href="<?php echo site_url('profil/sejarah'); ?>">Sejarah</a> </li>
                                                         <li> <a href="<?php echo site_url('profil/visi_misi'); ?>">Visi Misi</a> </li>
                                                     </ul>
                                                 </li>
-                                                <li class="mega-menu"> <a href="<?php echo site_url('angsuran'); ?>">Angsuran</a>
+                                                <li class="mega-menu  <?php if ($this->uri->segment('1') == 'angsuran') {
+                                                                            echo 'active';
+                                                                        } ?>"> <a href="<?php echo site_url('angsuran'); ?>">Angsuran</a>
                                                 </li>
-                                                <li class="mega-menu"> <a href="<?php echo site_url('simpanan/cek'); ?>">Simpanan</a>
-                                                <li class="mega-menu five-col"> <a href="<?php echo site_url('kontak'); ?>">Kontak</a>
+                                                <li class="mega-menu  <?php if ($this->uri->segment('1') == 'simpanan') {
+                                                                            echo 'active';
+                                                                        } ?>"> <a href="<?php echo site_url('simpanan/cek'); ?>">Simpanan</a>
+                                                </li>
+                                                <li class="mega-menu five-col  <?php if ($this->uri->segment('1') == 'kontak') {
+                                                                                    echo 'active';
+                                                                                } ?>"> <a href="<?php echo site_url('kontak'); ?>">Kontak</a>
 
                                                 </li>
                                             </ul>
