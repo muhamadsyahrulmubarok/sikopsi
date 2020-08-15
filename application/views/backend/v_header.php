@@ -22,15 +22,9 @@
                 <!-- item-->
                 <div class="dropdown-item noti-title">
                     <h6 class="m-0">
-                        Welcome !
+                        Welcome! <?= $admin['nama_admin']; ?>
                     </h6>
                 </div>
-
-                <!-- item-->
-                <a href="javascript:void(0);" class="dropdown-item notify-item">
-                    <i class="dripicons-user"></i>
-                    <span>My Account</span>
-                </a>
 
                 <div class="dropdown-divider"></div>
 
@@ -89,7 +83,7 @@
                     </a>
                 </li>
                 <?php
-                if ($admin['lvl_admin'] == 1) {
+                if ($this->session->userdata('lvl_admin') == 1) {
                 ?>
                     <li>
                         <a href="<?php echo site_url('admin'); ?>" class="alink">

@@ -37,8 +37,6 @@
             <div class="col-12">
                 <div class="card-box">
                     <a href="<?php echo site_url('admin/tambah'); ?>"><button class="btn btn-primary">Tambah</button></a>
-
-                    <p></p>
                     <h4 class="header-title">Data Admin</h4>
                     <?= $this->session->flashdata('message'); ?>
                     <div class="dropdown-divider"></div>

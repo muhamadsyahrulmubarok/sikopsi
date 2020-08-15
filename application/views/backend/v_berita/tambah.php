@@ -38,19 +38,19 @@
                         <div class="form-group row">
                             <label class="col-sm-2 col-form-label" for="judul_berita">Judul Berita</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" id="judul_berita" name="judul_berita" placeholder="Judul Berita">
+                                <input type="text" class="form-control" id="judul_berita" name="judul_berita" placeholder="Judul Berita" required>
                             </div>
                         </div>
                         <div class="form-group row">
                             <label class="col-sm-2 col-form-label" for="tgl_berita">Tanggal Berita</label>
                             <div class="col-sm-10">
-                                <input type="date" id="tgl_berita" name="tgl_berita" class="form-control" placeholder="Tanggal Berita">
+                                <input type="date" id="tgl_berita" name="tgl_berita" class="form-control" placeholder="Tanggal Berita" required>
                             </div>
                         </div>
                         <div class="form-group row">
                             <label class="col-sm-2 col-form-label" for="isi_berita">Isi Berita</label>
                             <div class="col-sm-10">
-                                <textarea name="isi_berita" id="summernote-editor" placeholder="Isi Berita" class="form-control"></textarea>
+                                <textarea name="isi_berita" id="summernote-editor" placeholder="Isi Berita" class="form-control" required></textarea>
                             </div>
                         </div>
                         <style>

@@ -36,19 +36,19 @@
                         <div class="form-group row">
                             <label class="col-sm-2 col-form-label" for="nama_anggota">Nama Lengkap</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" id="nama_anggota" name="nama_anggota" placeholder="Nama Lengkap">
+                                <input type="text" class="form-control" id="nama_anggota" name="nama_anggota" placeholder="Nama Lengkap" required>
                             </div>
                         </div>
                         <div class="form-group row">
                             <label class="col-sm-2 col-form-label" for="nohp_anggota">No HP</label>
                             <div class="col-sm-10">
-                                <input type="number" id="nohp_anggota" name="nohp_anggota" class="form-control" placeholder="No HP">
+                                <input type="number" id="nohp_anggota" name="nohp_anggota" class="form-control" placeholder="No HP" required>
                             </div>
                         </div>
                         <div class="form-group row">
                             <label class="col-sm-2 col-form-label">Resort</label>
                             <div class="col-sm-10">
-                                <select name="kd_resort" class="custom-select">
+                                <select name="kd_resort" class="custom-select" required>
                                     <option value="-">-- Pilih Resort --</option>
                                     <?php
                                     foreach ($resort as $row) {
@@ -62,7 +62,7 @@
                         <div class="form-group row">
                             <label class="col-sm-2 col-form-label">Hari</label>
                             <div class="col-sm-10">
-                                <select name="id_hari" class="custom-select">
+                                <select name="id_hari" class="custom-select" required>
                                     <option value="-">-- Pilih Hari --</option>
                                     <option value="1">Senin</option>
                                     <option value="2">Selasa</option>
@@ -77,29 +77,29 @@
                         <div class="form-group row">
                             <label class="col-sm-2 col-form-label" for="alamat_anggota">Alamat</label>
                             <div class="col-sm-10">
-                                <textarea id="alamat_anggota" name="alamat_anggota" class="form-control" placeholder="Alamat"></textarea>
+                                <textarea id="alamat_anggota" name="alamat_anggota" class="form-control" placeholder="Alamat" required></textarea>
                             </div>
                         </div>
 
                         <div class="form-group row">
                             <label class="col-sm-2 col-form-label" for="rt_anggota"></label>
                             <div class="col-sm-1">
-                                <input type="text" id="rt_anggota" name="rt_anggota" class="form-control" placeholder="RT">
+                                <input type="text" id="rt_anggota" name="rt_anggota" class="form-control" placeholder="RT" required>
                             </div>
                             <div class="col-sm-1">
-                                <input type="text" id="rw_anggota" name="rw_anggota" class="form-control" placeholder="RW">
+                                <input type="text" id="rw_anggota" name="rw_anggota" class="form-control" placeholder="RW" required>
                             </div>
                             <div class="col-sm-2">
-                                <input type="text" id="desa_anggota" name="desa_anggota" class="form-control" placeholder="Desa">
+                                <input type="text" id="desa_anggota" name="desa_anggota" class="form-control" placeholder="Desa" required>
                             </div>
                             <div class="col-sm-2">
-                                <input type="text" id="kec_anggota" name="kec_anggota" class="form-control" placeholder="Kecamatan">
+                                <input type="text" id="kec_anggota" name="kec_anggota" class="form-control" placeholder="Kecamatan" required>
                             </div>
                             <div class="col-sm-2">
-                                <input type="text" id="kab_anggota" name="kab_anggota" class="form-control" placeholder="Kabupaten">
+                                <input type="text" id="kab_anggota" name="kab_anggota" class="form-control" placeholder="Kabupaten" required>
                             </div>
                             <div class="col-sm-2">
-                                <input type="text" id="prov_anggota" name="prov_anggota" class="form-control" placeholder="Provinsi">
+                                <input type="text" id="prov_anggota" name="prov_anggota" class="form-control" placeholder="Provinsi" required>
                             </div>
                         </div>
 

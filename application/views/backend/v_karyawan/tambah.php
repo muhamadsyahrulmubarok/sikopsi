@@ -36,49 +36,49 @@
                         <div class="form-group row">
                             <label class="col-sm-2 col-form-label" for="nama_karyawan">Nama Karyawan</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" id="nama_karyawan" name="nama_karyawan" placeholder="Nama Lengkap Karyawan">
+                                <input type="text" class="form-control" id="nama_karyawan" name="nama_karyawan" placeholder="Nama Lengkap Karyawan" required>
                             </div>
                         </div>
                         <div class="form-group row">
                             <label class="col-sm-2 col-form-label" for="tgl_lahir">Tanggal Lahir</label>
                             <div class="col-sm-10">
-                                <input type="date" id="tgl_lahir" name="tgl_lahir" class="form-control" placeholder="Tanggal Lahir">
+                                <input type="date" id="tgl_lahir" name="tgl_lahir" class="form-control" placeholder="Tanggal Lahir" required>
                             </div>
                         </div>
                         <div class="form-group row">
                             <label class="col-sm-2 col-form-label" for="alamat">Alamat Karyawan</label>
                             <div class="col-sm-10">
-                                <textarea id="alamat" name="alamat" class="form-control" placeholder="Alamat Karyawan"></textarea>
+                                <textarea id="alamat" name="alamat" class="form-control" placeholder="Alamat Karyawan" required></textarea>
                             </div>
                         </div>
                         <div class="form-group row">
                             <label class="col-sm-2 col-form-label" for="masa_kerja">Masa Kerja</label>
                             <div class="col-sm-10">
-                                <input type="number" id="masa_kerja" name="masa_kerja" class="form-control" placeholder="Masa Kerja">
+                                <input type="number" id="masa_kerja" name="masa_kerja" class="form-control" placeholder="Masa Kerja" required>
                             </div>
                         </div>
                         <div class="form-group row">
                             <label class="col-sm-2 col-form-label" for="jabatan">Jabatan Karyawan</label>
                             <div class="col-sm-10">
-                                <input type="text" id="jabatan" name="jabatan" class="form-control" placeholder="Jabatan Karyawan">
+                                <input type="text" id="jabatan" name="jabatan" class="form-control" placeholder="Jabatan Karyawan" required>
                             </div>
                         </div>
                         <div class="form-group row">
                             <label class="col-sm-2 col-form-label" for="diangkat">Diangkat</label>
                             <div class="col-sm-10">
-                                <input type="date" id="diangkat" name="diangkat" class="form-control" placeholder="Diangkat">
+                                <input type="date" id="diangkat" name="diangkat" class="form-control" placeholder="Diangkat" required>
                             </div>
                         </div>
                         <div class="form-group row">
                             <label class="col-sm-2 col-form-label" for="golongan">Golongan</label>
                             <div class="col-sm-10">
-                                <input type="textarea" id="golongan" name="golongan" class="form-control" placeholder="Golongan">
+                                <input type="textarea" id="golongan" name="golongan" class="form-control" placeholder="Golongan" required>
                             </div>
                         </div>
                         <div class="form-group row">
                             <label class="col-sm-2 col-form-label" for="kd_resort">Nama Resort</label>
                             <div class="col-sm-10">
-                                <select name="kd_resort" class="custom-select">
+                                <select name="kd_resort" class="custom-select" required>
                                     <option value="-">-- Pilih Resort --</option>
                                     <?php
                                     foreach ($resort as $row) {

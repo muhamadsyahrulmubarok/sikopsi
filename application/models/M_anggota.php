@@ -48,7 +48,14 @@ class M_anggota extends CI_Model
 
     public function delete($id)
     {
-        $this->db->where('id_anggota', $id);
+        // $this->db->from("anggota");
+        // $this->db->join("peminjaman", "anggota.id_anggota = peminjaman.id_anggota");
+        $this->db->where("id_anggota", $id);
+        // $this->db->where("peminjaman.id_anggota", $id);
+        // $this->db->where('id_anggota', $id);
+        // $this->db->delete('angsuran');
+        // $this->db->delete('peminjaman');
+        // $this->db->delete('simpanan');
         $this->db->delete('anggota');
         return $this->db->affected_rows();
     }

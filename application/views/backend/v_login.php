@@ -16,17 +16,24 @@
     <link href="<?php echo base_url(); ?>assets/backend/css/icons.min.css" rel="stylesheet" type="text/css" />
     <link href="<?php echo base_url(); ?>assets/backend/css/app.min.css" rel="stylesheet" type="text/css" />
     <style>
-	body {
-			background: linear-gradient(45deg, #f22613, #f89406, #26a65b, #5868ec, #f54e80, #f7ca18, #d2527f);
-			background-size: 500% 500%;
-			-webkit-animation: ignielGradient 12s ease infinite;
-			-moz-animation: ignielGradient 12s ease infinite;
-			animation: ignielGradient 12s ease infinite;
-		}
-		@-webkit-keyframes ignielGradient {
-			0%{background-position:0% 50%}
-			50%{background-position:100% 50%}
-		}
+        body {
+            background: linear-gradient(45deg, #f22613, #f89406, #26a65b, #5868ec, #f54e80, #f7ca18, #d2527f);
+            background-size: 500% 500%;
+            -webkit-animation: ignielGradient 12s ease infinite;
+            -moz-animation: ignielGradient 12s ease infinite;
+            animation: ignielGradient 12s ease infinite;
+        }
+
+        @-webkit-keyframes ignielGradient {
+            0% {
+                background-position: 0% 50%
+            }
+
+            50% {
+                background-position: 100% 50%
+            }
+        }
+
         /* body {
             background-color: #f1c40f;
             -webkit-animation: color 5s ease-in 0s infinite alternate running;
@@ -129,7 +136,6 @@
                                 </div>
 
                                 <div class="form-group mb-3">
-                                    <a href="#" class="text-muted float-right"><small>Forgot your password?</small></a>
                                     <label for="password">Password</label>
                                     <input class="form-control" type="password" required="" id="password" placeholder="Enter your password" name="password_admin">
                                 </div>

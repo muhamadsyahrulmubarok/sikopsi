@@ -48,7 +48,8 @@
                         <div class="form-group row">
                             <label class="col-sm-2 col-form-label" for="password">Password</label>
                             <div class="col-sm-10">
-                                <input type="password" class="form-control" id="password" name="pswd_admin" required autocomplete="off">
+                                <input type="password" class="form-control" id="password" name="pswd_admin" autocomplete="off">
+                                <small class="text-danger">Jika ingin mengubah data, Password Wajib diisi kembali*)</small>
                             </div>
                         </div>
                         <div class="form-group row">
@@ -62,6 +63,8 @@
                                 <label class="custom-file-label" for="customFile">Choose file</label>
                             </div>
                         </div>
+                        <input type="hidden" name="img_admin1" value="<?= $data['img_admin']; ?>">
+                        <input type="hidden" name="pswd_admin1" value="<?= $data['pswd_admin']; ?>">
                         <div class="form-group row">
                             <div class="col-sm-2"></div>
                             <div class="col-sm-5">

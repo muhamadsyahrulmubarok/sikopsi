@@ -36,19 +36,19 @@
                         <div class="form-group row">
                             <label class="col-sm-2 col-form-label" for="nama_lengkap">Nama Lengkap</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" id="nama_lengkap" name="nama_admin" placeholder="Nama Lengkap">
+                                <input type="text" class="form-control" id="nama_lengkap" name="nama_admin" placeholder="Nama Lengkap" required>
                             </div>
                         </div>
                         <div class="form-group row">
                             <label class="col-sm-2 col-form-label" for="username">Username</label>
                             <div class="col-sm-10">
-                                <input type="text" id="username" name="username_admin" class="form-control" placeholder="username">
+                                <input type="text" id="username" name="username_admin" class="form-control" placeholder="username" required>
                             </div>
                         </div>
                         <div class="form-group row">
                             <label class="col-sm-2 col-form-label" for="password">Password</label>
                             <div class="col-sm-10">
-                                <input type="password" class="form-control" id="password" name="pswd_admin">
+                                <input type="password" class="form-control" id="password" name="pswd_admin" required>
                             </div>
                         </div>
 

@@ -52,7 +52,7 @@
                         <div class="form-group row">
                             <label class="col-sm-2 col-form-label" for="nama_anggota">Nama Peminjam</label>
                             <div class="col-sm-10">
-                                <select name="id_anggota" id="id_anggota" class="form-control" data-toggle="select2">
+                                <select name="id_anggota" id="id_anggota" class="form-control" data-toggle="select2" required>
                                     <option value="-" selected disabled>-- Pilih Anggota --</option>
                                     <?php
                                     foreach ($anggota as $row) {
@@ -66,13 +66,13 @@
                         <div class="form-group row">
                             <label class="col-sm-2 col-form-label" for="tgl_drop">Tanggal Drop</label>
                             <div class="col-sm-10">
-                                <input type="date" id="tgl_drop" name="tgl_drop" class="form-control" placeholder="Tanggal Drop" value="<?= date('Y-m-d'); ?>">
+                                <input type="date" id="tgl_drop" name="tgl_drop" class="form-control" placeholder="Tanggal Drop" value="<?= date('Y-m-d'); ?>" required>
                             </div>
                         </div>
                         <div class="form-group row">
                             <label class="col-sm-2 col-form-label">Pinjaman Pokok</label>
                             <div class="col-sm-10">
-                                <input type="text" id="pinjaman_pokok" name="pinjaman_pokok" class="form-control nominal" placeholder="Pinjaman Pokok" onchange="hitung()">
+                                <input type="text" id="pinjaman_pokok" name="pinjaman_pokok" class="form-control nominal" placeholder="Pinjaman Pokok" onchange="hitung()" required>
                             </div>
                         </div>
                         <div class="form-group row">
