@@ -102,8 +102,8 @@ class M_peminjaman extends CI_Model
 
     public function GetNo()
     {
-        $tgl = date('Y-m-d');
-        $this->db->where('tgl_drop', $tgl);
+        // $tgl = date('Y-m-d');
+        // $this->db->where('tgl_drop', $tgl);
         $q = $this->db->get('peminjaman');
         return $q->num_rows();
     }
@@ -128,7 +128,9 @@ class M_peminjaman extends CI_Model
 
     public function GetCount()
     {
+        // $this->db->join('anggota', 'anggota.id_anggota = peminjaman.id_anggota');
         $this->db->select('SUM(pinjaman_pokok) as total');
+        // $this->db->where('kd_resort', 'E');
         return $this->db->get('peminjaman')->row_array();
     }
 }

@@ -257,8 +257,7 @@
                                 <h5 class="font-weight-4 less-mar-1 line-height-4 text-primary opacity-9">Recent Blogs</h5>
                                 <h2 class="font-weight-6 less-mar-1 line-height-5">Latest Blog Posts </h2>
                                 <div class="ce-title-line"></div>
-                                <h6 class="ce-sub-text raleway">Praesent mattis commodo augue Aliquam ornare hendrerit augue Cras tellus
-                                    In pulvinar lectus a est Curabitur eget orci Cras laoreet ligula Etiam .</h6>
+
                             </div>
                         </div>
                         <div class="clearfix"></div>
@@ -273,12 +272,12 @@
                                         <img src="<?php echo base_url('assets/img_berita/') . $row['img_berita']; ?>" alt="" class="img-responsive" />
                                     </div>
                                     <div class="text-box padding-4">
-                                        <a href="#">
+                                        <a href="<?php echo site_url('halberita/lihat/') . $row['id_berita']; ?>">
                                             <h5 class="font-weight-5"><?= $row['judul_berita']; ?></h5>
                                         </a>
                                         <div class="blog-post-info"> <span><i class="fa fa-user"></i> By Admin</span> </div>
                                         <br />
-                                        <p class="font-weight-5"><?php echo $row['isi_berita']; ?></p>
+                                        <p class="font-weight-5"><?= substr($row['isi_berita'], 0, 950) . ' ...'; ?><a href="<?php echo site_url('halberita/lihat/') . $row['id_berita']; ?>">[Lihat Selengkapnya]</a></p>
                                         <br />
                                         <div class="col-md-12 nopadding">
                                             <a href="#">

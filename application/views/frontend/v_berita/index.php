@@ -163,7 +163,7 @@
                     <div class="blog-post-info"> <span><i class="fa fa-user"></i> By Admin</span> </div>
                     <br>
                     <div class="text-justify">
-                      <?= $row['isi_berita']; ?>
+                      <?= substr($row['isi_berita'], 0, 950) . ' ...'; ?><a href="<?php echo site_url('halberita/read/') . $row['id_berita']; ?>">[Lihat Selengkapnya]</a>
                     </div>
                     </br>
                     <a class="read-more" href="<?php echo site_url('halberita/lihat/') . $row['id_berita']; ?>"> Read more &nbsp; <i class="fa fa-angle-right" aria-hidden="true"></i></a>

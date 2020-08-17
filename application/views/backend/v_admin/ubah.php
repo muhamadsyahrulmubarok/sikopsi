@@ -48,7 +48,7 @@
                         <div class="form-group row">
                             <label class="col-sm-2 col-form-label" for="password">Password</label>
                             <div class="col-sm-10">
-                                <input type="password" class="form-control" id="password" name="pswd_admin" autocomplete="off">
+                                <input type="password" class="form-control" id="password" name="pswd_admin" autocomplete="off" required>
                                 <small class="text-danger">Jika ingin mengubah data, Password Wajib diisi kembali*)</small>
                             </div>
                         </div>
