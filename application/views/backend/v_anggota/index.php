@@ -83,6 +83,7 @@
                         <thead>
                             <tr>
                                 <th>No</th>
+                                <th>ID Anggota</th>
                                 <th>Nama</th>
                                 <th>Hari</th>
                                 <th>Resort</th>
@@ -98,6 +99,7 @@
                             ?>
                                 <tr>
                                     <td><?= $no; ?></td>
+                                    <td><?= $row['id_anggota']; ?></td>
                                     <td><?= $row['nama_anggota']; ?></td>
                                     <td><?= $row['nama_hari']; ?></td>
                                     <td><?= $row['nama_resort']; ?></td>
