@@ -32,21 +32,21 @@
                 <div class="card-box">
                     <h4 class="header-title">Form Tambah Anggota</h4>
 
-                    <form class="form-horizontal" action="<?php echo site_url('anggota/simpan'); ?>" method="POST">
+                    <form class="form-horizontal" action="<?php echo site_url('anggota/simpan'); ?>" method="POST" enctype="multipart/form-data">
                         <div class="form-group row">
-                            <label class="col-sm-2 col-form-label" for="nama_anggota">Nama Lengkap</label>
+                            <label class="col-sm-2 col-form-label" for="nama_anggota">Nama Lengkap <small class="text-danger">*</small></label>
                             <div class="col-sm-10">
                                 <input type="text" class="form-control" id="nama_anggota" name="nama_anggota" placeholder="Nama Lengkap" required>
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label class="col-sm-2 col-form-label" for="nohp_anggota">No HP</label>
+                            <label class="col-sm-2 col-form-label" for="nohp_anggota">No HP <small class="text-danger">*</small></label>
                             <div class="col-sm-10">
-                                <input type="number" id="nohp_anggota" name="nohp_anggota" class="form-control" placeholder="No HP" required>
+                                <input type="number" min="0" id="nohp_anggota" name="nohp_anggota" class="form-control" placeholder="No HP" required>
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label class="col-sm-2 col-form-label">Resort</label>
+                            <label class="col-sm-2 col-form-label">Resort <small class="text-danger">*</small></label>
                             <div class="col-sm-10">
                                 <select name="kd_resort" class="custom-select" required>
                                     <option value="-">-- Pilih Resort --</option>
@@ -60,7 +60,7 @@
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label class="col-sm-2 col-form-label">Hari</label>
+                            <label class="col-sm-2 col-form-label">Hari <small class="text-danger">*</small></label>
                             <div class="col-sm-10">
                                 <select name="id_hari" class="custom-select" required>
                                     <option value="-">-- Pilih Hari --</option>
@@ -75,7 +75,7 @@
                         </div>
 
                         <div class="form-group row">
-                            <label class="col-sm-2 col-form-label" for="alamat_anggota">Alamat</label>
+                            <label class="col-sm-2 col-form-label" for="alamat_anggota">Alamat <small class="text-danger">*</small></label>
                             <div class="col-sm-10">
                                 <textarea id="alamat_anggota" name="alamat_anggota" class="form-control" placeholder="Alamat" required></textarea>
                             </div>
@@ -104,7 +104,7 @@
                         </div>
 
                         <div class="form-group row">
-                            <label class="col-sm-2 col-form-label" for="usaha_anggota">Usaha Anggota</label>
+                            <label class="col-sm-2 col-form-label" for="usaha_anggota">Usaha Anggota <small class="text-danger">*</small></label>
                             <div class="col-sm-10">
                                 <div class="radio radio-success mb-2">
                                     <input type="radio" id="radio1" value="Petani" name="usaha_anggota">
@@ -119,15 +119,35 @@
                                     </label>
                                 </div>
                                 <div class="radio radio-success mb-2">
-                                    <input type="radio" id="radio3" value="Lainnya" name="usaha_anggota">
-                                    <label for="radio3">
-                                        Lainnya
+                                    <input type="radio" id="radio3" name="usaha_anggota" onclick="changeradioother()">
+                                    <label for="radio2">
+                                        <input id="inputother" type="text" onchange="changeradioother()">
                                     </label>
+
+                                    <!-- <input type="radio" id="radio3" value="Lainnya" name="usaha_anggota"> -->
+                                    <!-- <label for="radio3">
+                                        Lainnya
+                                    </label> -->
+                                    <script>
+                                        function changeradioother() {
+                                            var other = document.getElementById("inputother");
+                                            document.getElementById("radio3").value = other.value;
+                                        }
+                                    </script>
                                 </div>
                                 <!-- <input type="text" id="usaha_anggota" name="usaha_anggota" class="form-control" placeholder="Usaha"> -->
                             </div>
                         </div>
 
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label" for="tanda_pengenal">Scan Tanda Pengenal (KTP/SIM) <small class="text-danger">*</small></label>
+                            <div class="col-sm-10">
+                                <input type="file" class="custom-file-input" id="tanda_pengenal" name="tanda_pengenal" accept="image/*, application/pdf" required>
+                                <label class="custom-file-label" for="customFile">Choose file</label>
+                            </div>
+                        </div>
+
+                        <small class="text-danger">*)Data Wajib Diisi Semua</small>
                         <div class="form-group row">
                             <div class="col-sm-2"></div>
                             <div class="col-sm-5">
@@ -176,6 +196,13 @@
     <script src="<?php echo base_url(); ?>assets/backend/js/app.min.js"></script>
 
     <script src="<?php echo base_url(); ?>assets/backend/js/script.js"></script>
+    <script>
+        // Add the following code if you want the name of the file appear on select
+        $(".custom-file-input").on("change", function() {
+            var fileName = $(this).val().split("\\").pop();
+            $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+        });
+    </script>
 
 </body>
 

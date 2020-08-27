@@ -152,17 +152,18 @@
                                     <div class="row">
                                         <div class="col-md-12">
                                             <label class="lable-text" for="id_anggota"> ID Anggota</label>
-                                            <input id="id_anggota" class="input-1" type="text" placeholder="Masukan ID Anggota" name="id_anggota" value="<?= $this->input->get('id_anggota'); ?>">
+                                            <input id="id_anggota" class="input-1" type="text" placeholder="Masukan ID Anggota" name="id_anggota" value="<?= $this->input->get('id_anggota'); ?>" required>
+                                            <small class="text-danger">*</small>
                                         </div>
                                     </div>
                                     <div class="row">
-
                                         <div class="col-md-12 col-12">
                                             <label class="lable-text" for="no"> Nomor Peminjaman</label>
-                                            <input id="no" class="input-1" type="text" placeholder="Masukan Nomor Peminjaman" name="no" value="<?= $this->input->get('no'); ?>">
+                                            <input id="no" class="input-1" type="text" placeholder="Masukan Nomor Peminjaman" name="no" value="<?= $this->input->get('no'); ?>" required>
+                                            <small class="text-danger">*</small>
                                         </div>
-
                                     </div>
+                                    <small class="text-danger">*)Wajib dimasukan</small>
                                     <!-- end row -->
 
                                     <div class="row">
@@ -184,7 +185,8 @@
                                             </div>
                                             No Anggota : <?= $data['id_anggota']; ?><br>
                                             Nama : <?= $data['nama_anggota']; ?><br>
-                                            Jumlah Pinjaman : <?= $data['total_pinjaman']; ?><br>
+                                            Jumlah Pinjaman : <?= 'Rp. ' . number_format($data['total_pinjaman'], 0, ',', '.'); ?><br>
+                                            Jaminan : <?= $data['jaminan']; ?><br>
                                             Keterangan : <?= $data['keterangan']; ?><br>
                                             <table class="table table-bordered text-center">
                                                 <tr>
@@ -199,7 +201,7 @@
                                                 ?>
                                                     <tr>
                                                         <td><?= $row['angsuran_ke']; ?></td>
-                                                        <td>Rp. <?= $row['nominal_angsuran']; ?></td>
+                                                        <td>Rp. <?= number_format($row['nominal_angsuran'], 0, ',', '.'); ?></td>
                                                     </tr>
                                                 <?php } ?>
                                             </table>

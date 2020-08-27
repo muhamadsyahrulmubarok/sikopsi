@@ -44,13 +44,14 @@
                     <?= $this->session->flashdata('message'); ?>
                     <form class="form-horizontal" action="<?php echo site_url('peminjaman/simpan'); ?>" method="POST">
                         <div class="form-group row">
-                            <label class="col-sm-2 col-form-label" for="no_peminjaman">No Peminjaman</label>
+                            <label class="col-sm-2 col-form-label" for="no_peminjaman">No Peminjaman
+                                <small class="text-danger">*</small></label>
                             <div class="col-sm-10">
                                 <input type="text" id="no_peminjaman" name="no_peminjaman" class="form-control" placeholder="No Peminjaman" value="<?= $no; ?>" readonly>
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label class="col-sm-2 col-form-label" for="nama_anggota">Nama Peminjam</label>
+                            <label class="col-sm-2 col-form-label" for="nama_anggota">Nama Peminjam <small class="text-danger">*</small></label>
                             <div class="col-sm-10">
                                 <select name="id_anggota" id="id_anggota" class="form-control" data-toggle="select2" required>
                                     <option value="-" selected disabled>-- Pilih Anggota --</option>
@@ -64,13 +65,13 @@
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label class="col-sm-2 col-form-label" for="tgl_drop">Tanggal Drop</label>
+                            <label class="col-sm-2 col-form-label" for="tgl_drop">Tanggal Drop <small class="text-danger">*</small></label>
                             <div class="col-sm-10">
                                 <input type="date" id="tgl_drop" name="tgl_drop" class="form-control" placeholder="Tanggal Drop" value="<?= date('Y-m-d'); ?>" required>
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label class="col-sm-2 col-form-label">Pinjaman Pokok</label>
+                            <label class="col-sm-2 col-form-label">Pinjaman Pokok <small class="text-danger">*</small></label>
                             <div class="col-sm-10">
                                 <input type="text" id="pinjaman_pokok" name="pinjaman_pokok" class="form-control nominal" placeholder="Pinjaman Pokok" onchange="hitung()" required>
                             </div>
@@ -105,6 +106,13 @@
                                 <input type="number" id="angsuran" name="angsuran" class="form-control" placeholder="Angsuran" value="10" readonly>
                             </div>
                         </div>
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label">Jaminan <small class="text-danger">*</small></label>
+                            <div class="col-sm-10">
+                                <input type="text" id="jaminan" name="jaminan" class="form-control" placeholder="Jaminan" required>
+                            </div>
+                        </div>
+                        <small class="text-danger">*)Data Wajib Diisi Semua</small>
                         <input type="hidden" name="resort" id="resort">
                         <div class="form-group row">
                             <div class="col-sm-2"></div>

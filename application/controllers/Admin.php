@@ -59,6 +59,7 @@ class Admin extends CI_Controller
                 $data = array(
                     'nama_admin' => $this->input->post('nama_admin'),
                     'username_admin' => $this->input->post('username_admin'),
+                    'email_admin' => $this->input->post('email_admin'),
                     'pswd_admin' => password_hash($this->input->post('pswd_admin'), PASSWORD_DEFAULT),
                     'lvl_admin' => '2',
                     'img_admin' => $gambar
@@ -66,6 +67,7 @@ class Admin extends CI_Controller
             } else {
                 $data = array(
                     'nama_admin' => $this->input->post('nama_admin'),
+                    'email_admin' => $this->input->post('email_admin'),
                     'username_admin' => $this->input->post('username_admin'),
                     'lvl_admin' => '2',
                     'img_admin' => $gambar
@@ -78,6 +80,7 @@ class Admin extends CI_Controller
             if (!$this->input->post('pswd_admin')) {
                 $data = array(
                     'nama_admin' => $this->input->post('nama_admin'),
+                    'email_admin' => $this->input->post('email_admin'),
                     'username_admin' => $this->input->post('username_admin'),
                     'lvl_admin' => '2',
                     'img_admin' => 'default.png'
@@ -85,6 +88,7 @@ class Admin extends CI_Controller
             } else {
                 $data = array(
                     'nama_admin' => $this->input->post('nama_admin'),
+                    'email_admin' => $this->input->post('email_admin'),
                     'username_admin' => $this->input->post('username_admin'),
                     'pswd_admin' => password_hash($this->input->post('pswd_admin'), PASSWORD_DEFAULT),
                     'lvl_admin' => '2',

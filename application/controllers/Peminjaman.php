@@ -54,6 +54,7 @@ class Peminjaman extends CI_Controller
             'resiko_kredit' => $this->input->post('resiko_kredit'),
             'total_pinjaman' => $this->input->post('total_pinjaman'),
             'angsuran' => $this->input->post('angsuran'),
+            'jaminan' => $this->input->post('jaminan'),
             'id_anggota' => $id_anggota,
             'id_admin' => $this->session->userdata('id_admin'),
             'keterangan' => 'Proses'
@@ -155,6 +156,7 @@ class Peminjaman extends CI_Controller
             'jasa_pelayanan' => $this->input->post('jasa_pelayanan'),
             'resiko_kredit' => $this->input->post('resiko_kredit'),
             'total_pinjaman' => $this->input->post('total_pinjaman'),
+            'jaminan' => $this->input->post('jaminan'),
             'id_anggota' => $id_anggota,
         );
 

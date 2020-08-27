@@ -104,6 +104,13 @@
                                 <input type="number" id="angsuran" name="angsuran" class="form-control" placeholder="Angsuran" value="10" readonly>
                             </div>
                         </div>
+
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label">Jaminan <small class="text-danger">*</small></label>
+                            <div class="col-sm-10">
+                                <input type="text" id="jaminan" name="jaminan" class="form-control" placeholder="Jaminan" required>
+                            </div>
+                        </div>
                         <input type="hidden" name="resort" id="resort">
                         <div class="form-group row">
                             <div class="col-sm-2"></div>

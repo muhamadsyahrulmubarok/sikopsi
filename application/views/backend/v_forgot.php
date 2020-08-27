@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>Login - SIKOPSI</title>
+    <title>Lupa Password - SIKOPSI</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
     <meta content="Coderthemes" name="author" />
@@ -42,26 +42,26 @@
 
                             <div class="text-center mb-4">
                                 <span><img src="<?php echo base_url(); ?>assets/backend/images/logo.jpeg" alt="" height="90" width="90"></span>
+                                <p class="text-muted mt-3">Masukan alamat email dan kita akan mengirimkan instruksi untuk mereset password anda.</p>
                             </div>
                             <?php echo $this->session->flashdata('message'); ?>
-                            <form action="<?php echo site_url('auth'); ?>" method="POST" class="pt-2">
+                            <form action="<?php echo site_url('auth/forgot'); ?>" method="POST" class="pt-2">
 
                                 <div class="form-group mb-3">
-                                    <label for="username">Username</label>
-                                    <input class="form-control" type="text" id="username" required="" placeholder="Enter your username" name="username_admin">
-                                </div>
-
-                                <div class="form-group mb-3">
-                                    <a href="<?php echo site_url('auth/forgot'); ?>" class="text-muted float-right"><small>Forgot your password?</small></a>
-                                    <label for="password">Password</label>
-                                    <input class="form-control" type="password" required="" id="password" placeholder="Enter your password" name="password_admin">
+                                    <label for="email">Email</label>
+                                    <input class="form-control" type="text" id="email" required="" placeholder="Enter your email" name="email">
                                 </div>
 
                                 <div class="form-group mb-0 text-center">
-                                    <button class="btn btn-success btn-block" type="submit"> Masuk </button>
+                                    <button class="btn btn-success btn-block" type="submit"> Lupa Password </button>
                                 </div>
 
                             </form>
+                            <div class="row mt-3">
+                                <div class="col-12 text-center">
+                                    <p class="text-muted mb-0">Kembali ke <a href="<?php echo site_url('auth'); ?>" class="text-dark ml-1"><b>Log in</b></a></p>
+                                </div> <!-- end col -->
+                            </div>
 
                             <!-- end row -->
 

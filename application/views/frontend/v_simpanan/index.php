@@ -139,9 +139,11 @@
                                     <div class="row">
                                         <div class="col-md-12">
                                             <label class="lable-text" for="id"> ID Anggota</label>
-                                            <input id="id" class="input-1" type="text" placeholder="Masukan ID Anggota" name="id" value="<?= $this->input->get('id'); ?>">
+                                            <input id="id" class="input-1" type="text" placeholder="Masukan ID Anggota" name="id" value="<?= $this->input->get('id'); ?>" required>
+                                            <small class="text-danger">*</small>
                                         </div>
                                     </div>
+                                    <small class="text-danger">*)Wajib dimasukan</small>
                                     <div class="row">
                                         <div class="col-md-12 text-center">
                                             <button class="btn btn-primary btn-fullwidth uppercase" type="submit"><i class="fa fa-paper-plane"></i> Cek Data</button>

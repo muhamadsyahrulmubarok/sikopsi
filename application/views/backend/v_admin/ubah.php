@@ -40,6 +40,12 @@
                             </div>
                         </div>
                         <div class="form-group row">
+                            <label class="col-sm-2 col-form-label" for="email">Email</label>
+                            <div class="col-sm-10">
+                                <input type="text" id="email" name="email_admin" class="form-control" placeholder="email" value="<?= $data['email_admin']; ?>">
+                            </div>
+                        </div>
+                        <div class="form-group row">
                             <label class="col-sm-2 col-form-label" for="username_admin">Username</label>
                             <div class="col-sm-10">
                                 <input type="text" id="username_admin" name="username_admin" class="form-control" placeholder="Username" value="<?= $data['username_admin']; ?>">
