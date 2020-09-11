@@ -105,7 +105,7 @@
                                                                             echo 'active';
                                                                         } ?>"> <a href="<?php echo site_url('angsuran'); ?>">Angsuran</a>
                                                 </li>
-                                                <li class="mega-menu  <?php if ($this->uri->segment('1') == 'simpanan') {
+                                                <li class="mega-menu  <?php if ($this->uri->segment('2') == 'cek') {
                                                                             echo 'active';
                                                                         } ?>"> <a href="<?php echo site_url('simpanan/cek'); ?>">Simpanan</a>
                                                 </li>
@@ -113,6 +113,8 @@
                                                                                     echo 'active';
                                                                                 } ?>"> <a href="<?php echo site_url('kontak'); ?>">Kontak</a>
 
+                                                </li>
+                                                <li class="mega-menu five-col"> <a href="<?php echo site_url('auth'); ?>">Login</a>
                                                 </li>
                                             </ul>
                                         </div>
